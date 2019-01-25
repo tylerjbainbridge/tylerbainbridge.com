@@ -6,8 +6,8 @@
 
 // import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
-// export const replaceRenderer = ({ setHeadComponents }) => {
-//   const sheet = new ServerStyleSheet();
+export const replaceRenderer = ({ setHeadComponents }) => {
+  const sheet = new ServerStyleSheet();
 
-//   setHeadComponents([sheet.getStyleElement()]);
-// };
+  setHeadComponents([sheet.getStyleElement()]);
+};
