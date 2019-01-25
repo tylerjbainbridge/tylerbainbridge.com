@@ -41,7 +41,13 @@ const Layout = ({ children }) => {
               </div>
               <SiteWrapper>
                 <Helmet>
-                  <style>{`body { background-color: ${theme.backgroundColor} }`}</style>
+                  <style>{`
+                    body { background-color: ${theme.backgroundColor} }
+
+                    html.wf-loading * {
+                      opacity: 0;
+                    }
+                  `}</style>
                 </Helmet>
                 <PageContainer>{children}</PageContainer>
               </SiteWrapper>
