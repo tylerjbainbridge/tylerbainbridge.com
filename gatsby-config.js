@@ -51,14 +51,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: [
-            'Calibri',
-            'Libre Baskerville',
-            'Aleo',
-            'IBM Plex Mono',
-            'Playfair Display',
-            'Staatliches',
-          ],
+          families: ['Aleo', 'IBM Plex Mono', 'Staatliches'],
         },
       },
     },
