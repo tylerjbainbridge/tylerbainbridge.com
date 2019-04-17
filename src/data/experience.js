@@ -1,7 +1,21 @@
 const experience = [
   {
+    title: 'Senior Javascript Engineer',
+    dates: ['4/19', 'Present'],
+    location: 'Cambridge, MA',
+    company: {
+      name: 'CarGurus',
+      url: 'https://www.cargurus.com',
+    },
+    tech: [
+      'JavaScript',
+      'React',
+      'TypeScript',
+    ],
+  },
+  {
     title: 'Software Engineer',
-    dates: ['1/19', 'Present'],
+    dates: ['1/19', '3/19'],
     location: 'Boston, MA',
     company: {
       name: 'Consider',
