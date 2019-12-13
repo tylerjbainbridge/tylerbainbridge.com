@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import Helmet from "react-helmet";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from 'styled-components';
 
-import "../fonts/fonts.css";
+import '../fonts/fonts.css';
 
-import { BASE_THEME, LIGHT_THEME, DARK_THEME } from "../util/constants";
+import { BASE_THEME, LIGHT_THEME, DARK_THEME } from '../util/constants';
 
-import { InlineButton } from "../components/UI";
+import { InlineButton } from '../components/UI';
 
 const Layout = ({ children }) => {
   const [isDark, setDark] = useState(false);
 
   const theme = {
     ...BASE_THEME,
-    ...(isDark ? DARK_THEME : LIGHT_THEME)
+    ...(isDark ? DARK_THEME : LIGHT_THEME),
   };
 
   return (
@@ -34,9 +34,9 @@ const Layout = ({ children }) => {
         <ThemeProvider theme={theme}>
           <>
             <div>
-              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <InlineButton onClick={() => setDark(!isDark)}>
-                  {isDark ? "Light" : "Dark"} theme
+                  {isDark ? 'Light' : 'Dark'} theme
                 </InlineButton>
               </div>
               <SiteWrapper>
@@ -60,18 +60,19 @@ const Layout = ({ children }) => {
 };
 
 const SiteWrapper = styled.div`
-  display: flex;
+  ${'' /* display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; */}
 `;
 
 const PageContainer = styled.div`
+  margin: 0 auto;
   max-width: 1000px;
   margin-bottom: 150px;
 `;
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

@@ -24,6 +24,8 @@ export const BlogDate = styled.h2`
 
 export const BlogContainer = styled.div`
   color: ${props => props.theme.primaryColor};
+  max-width: 90%;
+  display: block;
 `;
 
 export const BlogHeader = styled.div`
@@ -35,16 +37,19 @@ export const BlogContent = styled.div`
   font-weight: initial;
   color: ${props => props.theme.secondaryFontColor};
   font-size: 25px;
+  margin: 20px;
 
-  /* Tell the list-items to not display numbers, but keep track of what the numbers should be */
   ol li {
     counter-increment: list;
     list-style-type: none;
     position: relative;
     margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+    font-size: 20px;
+  }
   }
 
-  /* Output the numbers using the counter() function, but use a custom color, and position the numbers how we want */
   ol li:before {
     color: ${props => props.theme.primaryColor};
     content: counter(list) ".";
@@ -64,20 +69,19 @@ export const BlogContent = styled.div`
 `;
 
 export default function Template({
-  data // this prop will be injected by the GraphQL query below.
+  data
 }) {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark;
+  const { markdownRemark: { frontmatter, html } } = data;
+
   return (
     <Layout>
       <BlogContainer>
         <BlogHeader>
-          <Img style={{ maxWidth: 500 }} fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+          <Img style={{ maxWidth: '90%' }} fluid={frontmatter.featuredImage.childImageSharp.fluid} />
           <BlogTitle>{frontmatter.title}</BlogTitle>
           <BlogDate>{frontmatter.date}</BlogDate>
         </BlogHeader>
         <BlogContent
-          className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </BlogContainer>
