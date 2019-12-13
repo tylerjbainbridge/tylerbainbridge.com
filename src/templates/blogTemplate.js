@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { SectionHeader, SectionText, textStyling } from "../components/UI";
 
+import Img from "gatsby-image"
 import Layout from "../components/Layout";
 import styled from "styled-components";
 
@@ -72,6 +72,7 @@ export default function Template({
     <Layout>
       <BlogContainer>
         <BlogHeader>
+          <Img style={{ maxWidth: 500 }} fluid={frontmatter.featuredImage.childImageSharp.fluid} />
           <BlogTitle>{frontmatter.title}</BlogTitle>
           <BlogDate>{frontmatter.date}</BlogDate>
         </BlogHeader>
@@ -92,6 +93,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -1,6 +1,7 @@
 ---
 path: "/blog/2019-album-list"
 date: "2019-12-13"
+featuredImage: ../images/album-collage.jpg
 title: "2019 Album List"
 ---
 1. Weyes Blood - Titanic Rising (Chamber pop, Art pop)
