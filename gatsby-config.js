@@ -6,19 +6,13 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-remark-prettier`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // Look for local .prettierrc file.
-        // The same as `prettier.resolveConfig(process.cwd())`
-        usePrettierrc: true,
-        // Overwrite prettier options, check out https://prettier.io/docs/en/options.html
-        prettierOptions: {
-          singleQuote: true,
-          trailingComma: 'all',
-          printWidth: 90,
-        },
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown`,
       },
     },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
