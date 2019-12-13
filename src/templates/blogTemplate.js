@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 
@@ -24,12 +24,12 @@ export const BlogDate = styled.h2`
 
 export const BlogContainer = styled.div`
   color: ${props => props.theme.primaryColor};
-  max-width: 90%;
+  max-width: 100%;
   display: block;
 `;
 
 export const BlogHeader = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 40px;
 `;
 
 export const BlogContent = styled.div`
@@ -37,53 +37,70 @@ export const BlogContent = styled.div`
   font-weight: initial;
   color: ${props => props.theme.secondaryFontColor};
   font-size: 25px;
-  margin: 20px;
+  width: 100%;
 
-  ol li {
-    counter-increment: list;
-    list-style-type: none;
-    position: relative;
-    margin-bottom: 15px;
-
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 20px;
   }
+
+  ol {
+    counter-reset: li;
+    margin-left: 0;
+    padding-left: 0;
+    position: relative;
+    margin-left: 40px;
   }
 
-  ol li:before {
+  ol > li {
+    position: relative;
+    margin-bottom: 30px;
+    list-style: none;
+    word-wrap: break-word;
+  }
+
+  ol > li:before {
     color: ${props => props.theme.primaryColor};
-    content: counter(list) ".";
-    left: -32px;
-    position: absolute;
-    text-align: right;
-    width: 26px;
-  }
 
-  li::before {
-    content: counter(li);
-    color: red;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+    content: counter(li) ". ";
+    counter-increment: li;
+    position: absolute;
+    top: -2px;
+
+    margin-left: -50px;
+    width: 45px;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin-right: 10px;
+
+    @media (max-width: 768px) {
+      margin-left: -35px;
+      width: 40px;
+    }
   }
 `;
 
-export default function Template({
-  data
-}) {
-  const { markdownRemark: { frontmatter, html } } = data;
+export default function Template({ data }) {
+  const {
+    markdownRemark: { frontmatter, html }
+  } = data;
 
   return (
     <Layout>
       <BlogContainer>
         <BlogHeader>
-          <Img style={{ maxWidth: '90%' }} fluid={frontmatter.featuredImage.childImageSharp.fluid} />
+          <Img
+            style={{ maxWidth: "100%" }}
+            fluid={frontmatter.featuredImage.childImageSharp.fluid}
+          />
           <BlogTitle>{frontmatter.title}</BlogTitle>
-          <BlogDate>{frontmatter.date}</BlogDate>
+          <BlogDate>
+            {frontmatter.date} - {frontmatter.author}
+          </BlogDate>
         </BlogHeader>
-        <BlogContent
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <BlogContent dangerouslySetInnerHTML={{ __html: html }} />
       </BlogContainer>
     </Layout>
   );
@@ -97,6 +114,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        author
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 400) {
