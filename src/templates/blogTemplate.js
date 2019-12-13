@@ -97,7 +97,7 @@ export default function Template({ data }) {
           />
           <BlogTitle>{frontmatter.title}</BlogTitle>
           <BlogDate>
-            {frontmatter.date} - {frontmatter.author}
+            {frontmatter.date}
           </BlogDate>
         </BlogHeader>
         <BlogContent dangerouslySetInnerHTML={{ __html: html }} />
