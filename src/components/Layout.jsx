@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 
 import styled, { ThemeProvider } from 'styled-components';
 
-import '../fonts/sanfransisco-font.css';
+import '../fonts/fonts.css';
 
 import { BASE_THEME, LIGHT_THEME, DARK_THEME } from '../util/constants';
 

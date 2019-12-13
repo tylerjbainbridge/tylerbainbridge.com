@@ -6,9 +6,9 @@ export const SectionContainer = styled.div`
 
 export const SectionHeader = styled.h2`
   color: ${props => props.theme.primaryColor};
-  font-family: 'Staatliches';
+  font-family: 'Cooper';
   letter-spacing: 2px;
-  font-style: italic;
+  font-style: normal;
   margin-bottom: 25px;
 `;
 

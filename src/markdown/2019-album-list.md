@@ -111,7 +111,6 @@ title: "2019 Album List"
 106. Lizzo - Cuz I Love You (Pop rap)
 107. ZelooperZ - Dyn-o-mite (Hip hop)
 108. Raveena - Lucid (Neo Soul/R&B)
-109. Jamila Woods - LEGACY! LEGACY! (R&B/Neo soul)
 110. oso oso - basking in the glow (Pop punk, Midwest emo)
 111. American Football - American Football (Midwest Emo)
 112. Flying Lotus - Flamagra (Wonky/Glitch hop)
@@ -119,3 +118,5 @@ title: "2019 Album List"
 114. Taylor Swift - Lover (Pop)
 115. Steve Lacy - Apollo XXI (Neo soul)
 116. Schoolboy Q - CrasH Talk (Hip hop)
+
+(...to be continued)
