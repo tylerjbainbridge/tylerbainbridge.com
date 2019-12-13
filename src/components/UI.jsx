@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const SectionContainer = styled.div`
   margin-bottom: 30px;
@@ -6,7 +6,7 @@ export const SectionContainer = styled.div`
 
 export const SectionHeader = styled.h2`
   color: ${props => props.theme.primaryColor};
-  font-family: 'Cooper';
+  font-family: "Cooper";
   letter-spacing: 2px;
   font-style: normal;
   margin-bottom: 25px;
@@ -20,7 +20,7 @@ export const importantStyling = css`
 
 export const textStyling = css`
   color: ${props => props.theme.secondaryFontColor};
-  font-family: 'Aleo';
+  font-family: "Aleo";
   letter-spacing: 3px;
   line-height: 34px;
   font-size: 30px;
@@ -80,7 +80,7 @@ export const SectionMetaText = styled.span`
 export const InlineButton = styled.span`
   padding: 5px;
   color: ${props => props.theme.primaryColor};
-  font-family: 'Staatliches';
+  font-family: "Staatliches";
   font-size: 12px;
   letter-spacing: 3px;
   font-weight: 300;

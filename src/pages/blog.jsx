@@ -1,28 +1,35 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { Link } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
+import { Link } from "gatsby";
+
+import styled from "styled-components";
+
+export const PostLinkContainer = styled.div`
+  font-family: "Cooper";
+  font-weight: bolder;
+  font-size: 30px;
+  margin: 30px;
+`;
 
 const PostLink = ({ post }) => (
-  <div>
-    <Link to={post.frontmatter.path}>
-      {post.frontmatter.title} ({post.frontmatter.date})
-    </Link>
-  </div>
-)
+  <Link to={post.frontmatter.path}>
+    {post.frontmatter.title} ({post.frontmatter.date})
+  </Link>
+);
 
 const Blog = ({
   data: {
-    allMarkdownRemark: { edges },
-  },
+    allMarkdownRemark: { edges }
+  }
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
 
-  return <div>{Posts}</div>
-}
+  return <PostLinkContainer>{Posts}</PostLinkContainer>;
+};
 
-export default Blog
+export default Blog;
 
 export const pageQuery = graphql`
   query {
@@ -40,4 +47,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
