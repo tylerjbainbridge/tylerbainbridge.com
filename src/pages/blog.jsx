@@ -1,21 +1,21 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { Link } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
+import { Link } from 'gatsby';
 
-import styled from "styled-components";
+import styled from 'styled-components';
+
+import Layout from '../components/Layout';
 
 export const PostLinkContainer = styled.div`
-  font-family: "Cooper";
-  font-weight: bolder;
-  font-size: 30px;
-  margin: 30px;
+  display: flex;
+  margin-top: 200px;
 `;
 
-const PostLink = ({ post }) => (
-  <Link to={post.frontmatter.path}>
-    {post.frontmatter.title} ({post.frontmatter.date})
-  </Link>
-);
+export const PostLink = styled(Link)`
+  color: ${props => props.theme.primaryColor};
+  font-family: 'Cooper';
+  font-size: 25px;
+`;
 
 const Blog = ({
   data: {
@@ -24,9 +24,17 @@ const Blog = ({
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+    .map(edge => (
+      <PostLink to={edge.node.frontmatter.path} key={edge.node.id}>
+        &rarr; {edge.node.frontmatter.title} ({edge.node.frontmatter.date})
+      </PostLink>
+    ));
 
-  return <PostLinkContainer>{Posts}</PostLinkContainer>;
+  return (
+    <Layout>
+      <PostLinkContainer>{Posts}</PostLinkContainer>
+    </Layout>
+  );
 };
 
 export default Blog;

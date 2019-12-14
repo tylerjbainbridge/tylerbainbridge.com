@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import experience, { tech as allTech } from "../data/experience";
-import social from "../data/social";
+import experience, { tech as allTech } from '../data/experience';
+import social from '../data/social';
 
-import Layout from "../components/Layout";
-import SEO from "../components/SEO";
+import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 
-import Me from "../images/me_1.jpg";
+import Me from '../images/me_1.jpg';
 
 import {
   SectionContainer,
@@ -24,7 +24,7 @@ import {
   AvatarImage,
   textStyling,
   importantStyling
-} from "../components/UI";
+} from '../components/UI';
 
 const ExperienceItem = ({
   isFirst = false,
@@ -33,7 +33,7 @@ const ExperienceItem = ({
     company,
     dates,
     location,
-    preposition = "at",
+    preposition = 'at',
     items = [],
     tech = []
   }
@@ -47,14 +47,14 @@ const ExperienceItem = ({
           <SectionText>
             <SectionKeywordLink href={company.url}>
               {company.name}
-            </SectionKeywordLink>{" "}
+            </SectionKeywordLink>{' '}
             &rarr; <ExperienceTitle>{title}</ExperienceTitle>
             <SectionMetaText>
-              {dates.join(" - ")} ({location})
+              {dates.join(' - ')} ({location})
             </SectionMetaText>
           </SectionText>
           {isExpanded && (
-            <div style={{ marginTop: "20px", marginBottom: "20px" }}>
+            <div style={{ marginTop: '20px', marginBottom: '20px' }}>
               <ExperienceItemList>
                 {items.map((item, idx) => (
                   <ExperienceItemListItem key={idx}>
@@ -63,13 +63,13 @@ const ExperienceItem = ({
                 ))}
               </ExperienceItemList>
               {!!tech.length && (
-                <ExperienceTech>[{tech.join(", ")}]</ExperienceTech>
+                <ExperienceTech>[{tech.join(', ')}]</ExperienceTech>
               )}
             </div>
           )}
           {!!(items.length || tech.length) && (
             <InlineButton onClick={() => setIsExpanded(!isExpanded)}>
-              show {isExpanded ? "less" : "more"}
+              show {isExpanded ? 'less' : 'more'}
             </InlineButton>
           )}
         </div>
@@ -102,14 +102,14 @@ const ExperienceItemList = styled.ul`
 
 const ExperienceItemListItem = styled.li`
   color: ${props => props.theme.primaryFontColor};
-  font-family: "IBM Plex Mono";
+  font-family: 'IBM Plex Mono';
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 15px;
   max-width: 90%;
   ::before {
-    content: "• ";
+    content: '• ';
     color: ${props =>
       props.theme.primaryColor}; /* or whatever color you prefer */
   }
@@ -117,7 +117,7 @@ const ExperienceItemListItem = styled.li`
 
 const ExperienceTech = styled.span`
   color: ${props => props.theme.secondaryFontColor};
-  font-family: "IBM Plex Mono";
+  font-family: 'IBM Plex Mono';
   font-size: 14px;
   font-weight: 500;
   line-height: 33px;
@@ -146,36 +146,36 @@ const IndexPage = () => {
         title="Home"
         keywords={[
           ...allTech,
-          "Tyler Bainbridge",
-          "Full Stack",
-          "Softwarte Engineer",
-          "Boston"
+          'Tyler Bainbridge',
+          'Full Stack',
+          'Softwarte Engineer',
+          'Boston'
         ]}
       />
       <SectionContainer>
-        <SectionHeader>About me-</SectionHeader>
+        <SectionHeader>Who am I-</SectionHeader>
         <AboutSection>
-          <AvatarImage src={Me} style={{ marginBottom: "20px" }} />
+          <AvatarImage src={Me} style={{ marginBottom: '20px' }} />
           <div>
-            <div style={{ marginBottom: "20px" }}>
+            <div style={{ marginBottom: '20px' }}>
               <SectionTextLarge>Tyler Bainbridge</SectionTextLarge>
             </div>
-            <div style={{ marginBottom: "20px" }}>
+            <div style={{ marginBottom: '20px' }}>
               <SectionText>
-                I'm a{" "}
+                I'm a{' '}
                 <SectionKeywordText>
                   Full Stack Software Engineer
-                </SectionKeywordText>{" "}
-                in <SectionKeywordText>Boston, MA</SectionKeywordText>
+                </SectionKeywordText>{' '}
+                in <SectionKeywordText>Boston, MA.</SectionKeywordText>
               </SectionText>
             </div>
             <SectionKeywordText
               style={{
                 height: 40,
                 width: social.length * 40,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between"
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between'
               }}
             >
               {social.map(({ url, Icon }) => (

@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Img from "gatsby-image";
-import Layout from "../components/Layout";
-import styled from "styled-components";
+import Img from 'gatsby-image';
+import Layout from '../components/Layout';
+import styled from 'styled-components';
 
 /**
    color: ${props => props.theme.primaryColor};
@@ -13,12 +13,12 @@ import styled from "styled-components";
  */
 
 export const BlogTitle = styled.h1`
-  font-family: "Cooper";
+  font-family: 'Cooper';
   font-weight: bolder;
 `;
 
 export const BlogDate = styled.h2`
-  font-family: "Dank";
+  font-family: 'Dank';
   font-weight: bolder;
 `;
 
@@ -32,8 +32,18 @@ export const BlogHeader = styled.div`
   margin-bottom: 40px;
 `;
 
+const StyledImg = styled(Img)`
+  max-width: 70%;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+`;
+
 export const BlogContent = styled.div`
-  font-family: "Cooper";
+  display: flex;
+  flex-wrap: wrap;
+
+  font-family: 'Cooper';
   font-weight: initial;
   color: ${props => props.theme.secondaryFontColor};
   font-size: 25px;
@@ -61,7 +71,7 @@ export const BlogContent = styled.div`
   ol > li:before {
     color: ${props => props.theme.primaryColor};
 
-    content: counter(li) ". ";
+    content: counter(li) '. ';
     counter-increment: li;
     position: absolute;
     top: -2px;
@@ -91,14 +101,9 @@ export default function Template({ data }) {
     <Layout>
       <BlogContainer>
         <BlogHeader>
-          <Img
-            style={{ maxWidth: "100%" }}
-            fluid={frontmatter.featuredImage.childImageSharp.fluid}
-          />
+          <StyledImg fluid={frontmatter.featuredImage.childImageSharp.fluid} />
           <BlogTitle>{frontmatter.title}</BlogTitle>
-          <BlogDate>
-            {frontmatter.date}
-          </BlogDate>
+          <BlogDate>{frontmatter.date}</BlogDate>
         </BlogHeader>
         <BlogContent dangerouslySetInnerHTML={{ __html: html }} />
       </BlogContainer>

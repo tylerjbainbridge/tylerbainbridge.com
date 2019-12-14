@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import Helmet from "react-helmet";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from 'styled-components';
 
-import "../fonts/fonts.css";
+import '../fonts/fonts.css';
 
-import { BASE_THEME, LIGHT_THEME, DARK_THEME } from "../util/constants";
+import { BASE_THEME, LIGHT_THEME, DARK_THEME } from '../util/constants';
 
-import { InlineButton } from "../components/UI";
+import { InlineButton } from '../components/UI';
 
 const Layout = ({ children }) => {
-  const [isDark, setDark] = useState(false);
+  const [isDark, setDark] = useState(true);
 
   const theme = {
     ...BASE_THEME,
@@ -33,9 +33,16 @@ const Layout = ({ children }) => {
       render={data => (
         <ThemeProvider theme={theme}>
           <>
-            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <div
+              style={{
+                right: 0,
+                top: 0,
+                position: 'fixed',
+                padding: 20
+              }}
+            >
               <InlineButton onClick={() => setDark(!isDark)}>
-                {isDark ? "Light" : "Dark"} theme
+                {isDark ? 'Light' : 'Dark'} theme
               </InlineButton>
             </div>
             <Helmet>
@@ -56,14 +63,14 @@ const Layout = ({ children }) => {
 };
 
 const SiteWrapper = styled.div`
-  ${"" /* display: flex;
+  ${'' /* display: flex;
   flex-direction: row;
   justify-content: center; */}
 `;
 
 const PageContainer = styled.div`
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 700px;
   margin-bottom: 150px;
 `;
 
