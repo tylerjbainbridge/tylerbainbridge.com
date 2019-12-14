@@ -41,11 +41,15 @@ export const StickyPart = styled.span`
 
 const Layout = ({ children, ...props }) => {
   const [isDark, setDark] = useState(
-    localStorage.getItem('isDark') ? JSON.parse(localStorage.isDark) : true
+    window.localStorage
+      ? window.localStorage.getItem('isDark')
+        ? JSON.parse(window.localStorage.isDark)
+        : true
+      : true
   );
 
   useEffect(() => {
-    localStorage.setItem('isDark', isDark);
+    window.localStorage.setItem('isDark', isDark);
   }, [isDark]);
 
   const theme = {
