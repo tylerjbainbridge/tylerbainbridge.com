@@ -62,16 +62,11 @@ const Layout = ({ children }) => {
   );
 };
 
-const SiteWrapper = styled.div`
-  ${'' /* display: flex;
-  flex-direction: row;
-  justify-content: center; */}
-`;
-
 const PageContainer = styled.div`
   margin: 0 auto;
   max-width: 700px;
   margin-bottom: 150px;
+  margin-top: 30px;
 `;
 
 Layout.propTypes = {
