@@ -24,6 +24,7 @@ export const BlogDate = styled.h2`
 
 export const BlogContainer = styled.div`
   color: ${props => props.theme.primaryColor};
+  margin-top: 70px;
   max-width: 100%;
   display: block;
 `;

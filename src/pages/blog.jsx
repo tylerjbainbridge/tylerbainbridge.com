@@ -8,6 +8,7 @@ import Layout from '../components/Layout';
 
 export const PostLinkContainer = styled.div`
   display: flex;
+  margin: 20px;
   margin-top: 200px;
 `;
 

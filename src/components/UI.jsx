@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
 
 export const SectionContainer = styled.div`
   margin-bottom: 30px;
@@ -78,15 +79,23 @@ export const SectionMetaText = styled.span`
   align-items: center;
 `;
 
-export const InlineButton = styled.span`
+export const buttonStyles = css`
   padding: 5px;
   color: ${props => props.theme.primaryColor};
   font-family: 'Staatliches';
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 3px;
   font-weight: 300;
   vertical-align: middle;
   cursor: pointer;
+`;
+
+export const InlineButton = styled.span`
+  ${buttonStyles}
+`;
+
+export const InlineLink = styled(Link)`
+  ${buttonStyles}
 `;
 
 export const AvatarImage = styled.img`
