@@ -32,14 +32,16 @@ const Sticky = styled.div`
   position: fixed;
   z-index: 10;
 
-  background-color: ${props => props.theme.backgroundColor};
+  @media (max-width: 768px) {
+    background-color: ${props => props.theme.backgroundColor};
+  }
 `;
 
 export const StickyPart = styled.span`
   padding: 20px;
 `;
 
-const Layout = ({ children, ...props }) => {
+const Layout = ({ children }) => {
   const [isDark, setDark] = useState(
     typeof window !== 'undefined' && window.localStorage.getItem('isDark')
       ? JSON.parse(window.localStorage.isDark)
