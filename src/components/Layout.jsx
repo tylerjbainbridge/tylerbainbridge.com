@@ -41,10 +41,8 @@ export const StickyPart = styled.span`
 
 const Layout = ({ children, ...props }) => {
   const [isDark, setDark] = useState(
-    window
-      ? window.localStorage.getItem('isDark')
-        ? JSON.parse(window.localStorage.isDark)
-        : true
+    window && window.localStorage.getItem('isDark')
+      ? JSON.parse(window.localStorage.isDark)
       : true
   );
 
