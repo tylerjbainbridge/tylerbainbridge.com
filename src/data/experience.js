@@ -8,9 +8,9 @@ const experience = [
       url: 'https://www.cargurus.com'
     },
     items: [
-      'Working on emerging products team building the P2P Digital Checkout Flow',
+      'Working on the emerging products team building the CarGurus P2P Digital Checkout Flow',
       'Removing legacy FTL code and replacing it with highly reusable and clean React',
-      'Converting complex redux-forms into vanilla React using context, hooks, and other modern form strategies'
+      // 'Converting complex redux-forms into vanilla React using context, hooks, and other modern form strategies'
     ],
     tech: ['JavaScript', 'React', 'Styled Components']
   },
