@@ -3,59 +3,65 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, image, url, author, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description;
+        const { siteMetadata: defaults } = data.site;
+
         return (
           <Helmet
-            htmlAttributes={{
-              lang
-            }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            htmlAttributes={{ lang }}
+            title={title || defaults.title}
+            titleTemplate={`%s | ${defaults.title}`}
             meta={[
               {
                 name: `description`,
-                content: metaDescription
+                content: description || defaults.description,
               },
               {
                 property: `og:title`,
-                content: title
+                content: title || defaults.title,
               },
               {
                 property: `og:description`,
-                content: metaDescription
+                content: description || defaults.description,
               },
               {
                 property: `og:type`,
-                content: `website`
+                content: `website`,
+              },
+              {
+                property: "og:url",
+                content: url || defaults.url,
               },
               {
                 name: `twitter:card`,
-                content: `summary`
+                content: `summary`,
+              },
+              {
+                name: `twitter:image`,
+                content: image || defaults.image,
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author
+                content: author || defaults.author,
               },
               {
                 name: `twitter:title`,
-                content: title
+                content: title || defaults.title,
               },
               {
                 name: `twitter:description`,
-                content: metaDescription
-              }
+                content: description || defaults.description,
+              },
             ]
               .concat(
                 keywords.length > 0
                   ? {
                       name: `keywords`,
-                      content: keywords.join(`, `)
+                      content: keywords.join(`, `),
                     }
                   : []
               )
@@ -70,7 +76,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: []
+  keywords: [],
 };
 
 SEO.propTypes = {
@@ -78,7 +84,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default SEO;
@@ -88,8 +94,9 @@ const detailsQuery = graphql`
     site {
       siteMetadata {
         title
-        description
-        author
+        url
+        image
+        twitterUsername
       }
     }
   }

@@ -1,10 +1,11 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import { Link } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
+import { Link } from "gatsby";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 export const PostLinkContainer = styled.div`
   display: flex;
@@ -14,14 +15,14 @@ export const PostLinkContainer = styled.div`
 
 export const PostLink = styled(Link)`
   color: ${props => props.theme.primaryColor};
-  font-family: 'Cooper';
+  font-family: "Cooper";
   font-size: 25px;
 `;
 
 const Blog = ({
   data: {
-    allMarkdownRemark: { edges }
-  }
+    allMarkdownRemark: { edges },
+  },
 }) => {
   const Posts = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
@@ -33,6 +34,16 @@ const Blog = ({
 
   return (
     <Layout>
+      <SEO
+        title='Blog'
+        keywords={[
+          "Tyler Bainbridge",
+          "Full Stack",
+          "Software Engineer",
+          "Boston",
+          "Blog",
+        ]}
+      />
       <PostLinkContainer>{Posts}</PostLinkContainer>
     </Layout>
   );

@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tyler Bainbridge',
-    description: 'Portfolio',
-    author: 'Tyler Bainbridge',
+    title: "Tyler Bainbridge",
+    titleTemplate: "%s · The Real Hero",
+    url: "https://www.tylerbainbridge.com",
+    image: "/images/me.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@tjbainbridge",
+    author: "Tyler Bainbridge"
   },
   plugins: [
     {

@@ -1,9 +1,10 @@
-import React from 'react';
-import { graphql } from 'gatsby';
+import React from "react";
+import { graphql } from "gatsby";
 
-import Img from 'gatsby-image';
-import Layout from '../components/Layout';
-import styled from 'styled-components';
+import Img from "gatsby-image";
+import Layout from "../components/Layout";
+import SEO from "../components/SEO";
+import styled from "styled-components";
 
 /**
    color: ${props => props.theme.primaryColor};
@@ -13,12 +14,12 @@ import styled from 'styled-components';
  */
 
 export const BlogTitle = styled.h1`
-  font-family: 'Cooper';
+  font-family: "Cooper";
   font-weight: bolder;
 `;
 
 export const BlogDate = styled.h2`
-  font-family: 'Dank';
+  font-family: "Dank";
   font-weight: bolder;
 `;
 
@@ -44,7 +45,7 @@ export const BlogContent = styled.div`
   display: flex;
   flex-wrap: wrap;
 
-  font-family: 'Cooper';
+  font-family: "Cooper";
   font-weight: initial;
   color: ${props => props.theme.secondaryFontColor};
   font-size: 25px;
@@ -72,7 +73,7 @@ export const BlogContent = styled.div`
   ol > li:before {
     color: ${props => props.theme.primaryColor};
 
-    content: counter(li) '. ';
+    content: counter(li) ". ";
     counter-increment: li;
     position: absolute;
     top: -2px;
@@ -95,11 +96,22 @@ export const BlogContent = styled.div`
 
 export default function Template({ data }) {
   const {
-    markdownRemark: { frontmatter, html }
+    markdownRemark: { frontmatter, html },
   } = data;
 
   return (
     <Layout>
+      <SEO
+        title={frontmatter.title}
+        image={frontmatter.featuredImage.childImageSharp.fluid}
+        keywords={[
+          "Tyler Bainbridge",
+          "Full Stack",
+          "Software Engineer",
+          "Boston",
+          "Blog",
+        ]}
+      />
       <BlogContainer>
         <BlogHeader>
           <StyledImg fluid={frontmatter.featuredImage.childImageSharp.fluid} />
