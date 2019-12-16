@@ -22,13 +22,17 @@ const experience = [
       name: 'Consider',
       url: 'http://consider.co'
     },
-    items: ['Fixing email'],
+    items: [
+      'Worked on the web and mobile applications for the Consider email client',
+      'Implemented the first iteration of the sign up and pay flow'
+    ],
     tech: [
       'JavaScript',
       'React',
       'React Native',
       'GraphQL',
-      'TypeScript',
+      'Relay',
+      'Flow',
       'Ruby on Rails'
     ]
   },
