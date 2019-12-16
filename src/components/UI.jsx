@@ -24,7 +24,7 @@ export const textStyling = css`
   font-family: 'Aleo';
   letter-spacing: 3px;
   line-height: 34px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -72,7 +72,7 @@ export const SectionKeywordIconLink = styled.a`
 
 export const SectionMetaText = styled.span`
   color: ${props => props.theme.secondaryFontColor};
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 500;
   vertical-align: middle;
   display: flex;
