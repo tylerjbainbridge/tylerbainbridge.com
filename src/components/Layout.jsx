@@ -71,29 +71,27 @@ const Layout = ({ children }) => {
       render={data =>
         isDark !== undefined && (
           <Location>
-            {({ location }) =>
-              console.log(location) || (
-                <ThemeProvider theme={theme}>
-                  <Sticky>
-                    <StickyPart>
-                      {location.pathname !== "/" && (
-                        <InlineLink to='/'>Home</InlineLink>
-                      )}
-                      {location.pathname !== "/blog" && (
-                        <InlineLink to='/blog'>Blog</InlineLink>
-                      )}
-                    </StickyPart>
-                    <StickyPart>
-                      <InlineButton onClick={() => setDark(!isDark)}>
-                        {isDark ? "Light" : "Dark"} theme
-                      </InlineButton>
-                    </StickyPart>
-                  </Sticky>
-                  <GlobalStyle whiteColor />
-                  <PageContainer>{children}</PageContainer>
-                </ThemeProvider>
-              )
-            }
+            {({ location }) => (
+              <ThemeProvider theme={theme}>
+                <Sticky>
+                  <StickyPart>
+                    {location.pathname !== "/" && (
+                      <InlineLink to='/'>Home</InlineLink>
+                    )}
+                    {location.pathname !== "/blog" && (
+                      <InlineLink to='/blog'>Blog</InlineLink>
+                    )}
+                  </StickyPart>
+                  <StickyPart>
+                    <InlineButton onClick={() => setDark(!isDark)}>
+                      {isDark ? "Light" : "Dark"} theme
+                    </InlineButton>
+                  </StickyPart>
+                </Sticky>
+                <GlobalStyle whiteColor />
+                <PageContainer>{children}</PageContainer>
+              </ThemeProvider>
+            )}
           </Location>
         )
       }
