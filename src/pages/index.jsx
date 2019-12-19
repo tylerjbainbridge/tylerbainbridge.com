@@ -166,7 +166,7 @@ const IndexPage = () => {
                 <SectionKeywordText>
                   Full Stack Software Engineer
                 </SectionKeywordText>{" "}
-                in <SectionKeywordText>Boston, MA.</SectionKeywordText>
+                living in <SectionKeywordText>Boston, MA.</SectionKeywordText>
               </SectionText>
             </div>
             <SectionKeywordText
