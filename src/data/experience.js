@@ -41,7 +41,7 @@ const experience = [
     dates: ['2/17', '1/19'],
     location: 'Cambridge, MA',
     company: {
-      name: 'Conduit Analytics',
+      name: 'Conduit Analytics (Acquired 2019)',
       url: 'http://conduithq.com'
     },
     items: [
