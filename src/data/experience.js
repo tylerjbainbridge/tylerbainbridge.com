@@ -4,11 +4,11 @@ const experience = [
     dates: ['4/19', 'Present'],
     location: 'Cambridge, MA',
     company: {
-      name: 'CarGurus',
+      name: 'CarGurus (labs)',
       url: 'https://www.cargurus.com'
     },
     items: [
-      'Working on the emerging products team building the CarGurus P2P Digital Checkout Flow',
+      'Working on the labs team building the CarGurus P2P Digital Checkout Flow',
       'Removing legacy FTL code and replacing it with highly reusable and clean React',
       // 'Converting complex redux-forms into vanilla React using context, hooks, and other modern form strategies'
     ],
