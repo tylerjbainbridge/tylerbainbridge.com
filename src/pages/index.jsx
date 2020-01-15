@@ -8,7 +8,7 @@ import social from "../data/social";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 
-import Me from "../images/me_1.jpg";
+import Me from "../images/me_jumping.jpg";
 
 import {
   SectionContainer,
