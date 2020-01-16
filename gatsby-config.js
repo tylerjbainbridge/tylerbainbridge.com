@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Tyler Bainbridge",
-    titleTemplate: "%s · The Real Hero",
     url: "https://www.tylerbainbridge.com",
-    image: "/images/me.jpg", // Path to your image you placed in the 'static' folder
+    image: "/images/me_jumping.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@tjbainbridge",
     author: "Tyler Bainbridge"
   },
@@ -35,7 +34,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/me_1.jpg', // This path is relative to the root of the site.
+        icon: 'src/images/me_jumping.jpg', // This path is relative to the root of the site.
       },
     },
     {
