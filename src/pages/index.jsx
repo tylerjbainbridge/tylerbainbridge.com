@@ -144,6 +144,7 @@ const IndexPage = () => {
     <Layout>
       <SEO
         title='Tyler Bainbridge'
+        image={Me}
         keywords={[
           ...allTech,
           "Tyler Bainbridge",
