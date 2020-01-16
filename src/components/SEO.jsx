@@ -33,6 +33,10 @@ function SEO({ description, lang, image, url, author, meta, keywords, title }) {
                 content: `website`,
               },
               {
+                property: `og:image`,
+                content: image || defaults.image,
+              },
+              {
                 property: "og:url",
                 content: url || defaults.url,
               },
@@ -97,6 +101,7 @@ const detailsQuery = graphql`
         url
         image
         twitterUsername
+        author
       }
     }
   }

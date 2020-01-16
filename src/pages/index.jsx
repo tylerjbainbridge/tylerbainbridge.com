@@ -143,7 +143,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        title='Portfolio'
+        title='Tyler Bainbridge'
         keywords={[
           ...allTech,
           "Tyler Bainbridge",
@@ -179,7 +179,7 @@ const IndexPage = () => {
               }}
             >
               {social.map(({ url, Icon }) => (
-                <SectionKeywordIconLink href={url}>
+                <SectionKeywordIconLink href={url} target="_blank">
                   <Icon />
                 </SectionKeywordIconLink>
               ))}
