@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql, Link } from "gatsby";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
 import styled, {
   css,
   ThemeProvider,
   createGlobalStyle,
-} from "styled-components";
-import { Location } from "@reach/router";
-import "../fonts/fonts.css";
+} from 'styled-components';
+import { Location } from '@reach/router';
+import '../fonts/fonts.css';
 
-import { BASE_THEME, LIGHT_THEME, DARK_THEME } from "../util/constants";
+import { BASE_THEME, LIGHT_THEME, DARK_THEME } from '../util/constants';
 
-import { InlineButton, InlineLink } from "../components/UI";
+import { InlineButton, InlineLink } from './UI';
 
 const GlobalStyle = createGlobalStyle`
-  body { background-color: ${props => props.theme.backgroundColor}; }
+  body { background-color: ${(props) => props.theme.backgroundColor}; }
 
   html.wf-loading * {
     opacity: 0;
@@ -33,7 +33,7 @@ const Sticky = styled.div`
   z-index: 10;
 
   @media (max-width: 768px) {
-    background-color: ${props => props.theme.backgroundColor};
+    background-color: ${(props) => props.theme.backgroundColor};
   }
 `;
 
@@ -43,13 +43,13 @@ export const StickyPart = styled.span`
 
 const Layout = ({ children }) => {
   const [isDark, setDark] = useState(
-    typeof window !== "undefined"
-      ? JSON.parse(window.localStorage.getItem("isDark") || true)
+    typeof window !== 'undefined'
+      ? JSON.parse(window.localStorage.getItem('isDark') || true)
       : undefined
   );
 
   useEffect(() => {
-    window.localStorage.setItem("isDark", isDark);
+    window.localStorage.setItem('isDark', isDark);
   }, [isDark]);
 
   const theme = {
@@ -68,23 +68,23 @@ const Layout = ({ children }) => {
           }
         }
       `}
-      render={data =>
+      render={(data) =>
         isDark !== undefined && (
           <Location>
             {({ location }) => (
               <ThemeProvider theme={theme}>
                 <Sticky>
                   <StickyPart>
-                    {location.pathname !== "/" && (
-                      <InlineLink to='/'>Home</InlineLink>
+                    {location.pathname !== '/' && (
+                      <InlineLink to="/">Home</InlineLink>
                     )}
-                    {location.pathname !== "/blog" && (
-                      <InlineLink to='/blog'>Blog</InlineLink>
+                    {location.pathname !== '/blog' && (
+                      <InlineLink to="/blog">Blog</InlineLink>
                     )}
                   </StickyPart>
                   <StickyPart>
                     <InlineButton onClick={() => setDark(!isDark)}>
-                      {isDark ? "Light" : "Dark"} theme
+                      {isDark ? 'Light' : 'Dark'} theme
                     </InlineButton>
                   </StickyPart>
                 </Sticky>

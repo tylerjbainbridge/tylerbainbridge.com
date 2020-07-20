@@ -4,10 +4,4 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-import { ServerStyleSheet } from 'styled-components';
-
-export const replaceRenderer = ({ setHeadComponents }) => {
-  const sheet = new ServerStyleSheet();
-
-  setHeadComponents([sheet.getStyleElement()]);
-};
+// You can delete this file if you're not using it

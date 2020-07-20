@@ -1,277 +1,105 @@
 @font-face {
-  font-family: "Cooper";
+  font-family: 'Lack Regular';
+  src: url('lack-regular-webfont.woff2') format('woff2'),
+    url('lack-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-  src: url("./Cooper-Md-BT-Medium.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "Dank";
-    src: url("./DankMono-Regular.otf");
-  }
-
-/** Black */
-@font-face {
-  font-family: "SF Display";
-  font-weight: 900;
-  src: url("https://sf.abarba.me/SF-UI-Display-Black.otf");
+  font-family: 'Pilowlava';
+  src: url('Pilowlava-Regular.woff2') format('woff2'),
+    url('Pilowlava-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Bold */
 @font-face {
-  font-family: "SF Display";
-  font-weight: 700;
-  src: url("https://sf.abarba.me/SF-UI-Display-Bold.otf");
+  font-family: 'Le Murmure Regular';
+  src: url('Le_Murmure-Regular_web.woff') format('woff'),
+    url('Le_Murmure-Regular_web.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Heavy */
 @font-face {
-  font-family: "SF Display";
-  font-weight: 800;
-  src: url("https://sf.abarba.me/SF-UI-Display-Heavy.otf");
+  font-family: 'Millimetre Regular';
+  src: url('Millimetre-Regular_web.woff') format('woff'),
+    url('Millimetre-Regular_web.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Light */
 @font-face {
-  font-family: "SF Display";
-  font-weight: 200;
-  src: url("https://sf.abarba.me/SF-UI-Display-Light.otf");
+  font-family: 'Millimetre Bold';
+  src: url('Millimetre-Bold_web.woff') format('woff'),
+    url('Millimetre-Bold_web.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Medium */
 @font-face {
-  font-family: "SF Display";
-  font-weight: 500;
-  src: url("https://sf.abarba.me/SF-UI-Display-Medium.otf");
+  font-family: 'Kaerukaeru Regular';
+  src: url('kaerukaeru-Regular.woff') format('woff'),
+    url('kaerukaeru-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Regular */
 @font-face {
-  font-family: "SF Display";
-  font-weight: 400;
-  src: url("https://sf.abarba.me/SF-UI-Display-Regular.otf");
+  font-family: 'Mayenne Sans Regular';
+  src: url('Mayenne_Sans-Regular_web.woff') format('woff'),
+    url('Mayenne_Sans-Regular_web.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Semibold */
 @font-face {
-  font-family: "SF Display";
-  font-weight: 600;
-  src: url("https://sf.abarba.me/SF-UI-Display-Semibold.otf");
+  font-family: 'Steps Mono';
+  src: url('Steps-Mono.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Thin */
 @font-face {
-  font-family: "SF Display";
-  font-weight: 300;
-  src: url("https://sf.abarba.me/SF-UI-Display-Thin.otf");
+  font-family: 'Savate Regular';
+  src: url('savate-regular-webfont.woff2') format('woff'),
+    url('savate-regular-webfont.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Ultralight */
 @font-face {
-  font-family: "SF Display";
-  font-weight: 100;
-  src: url("https://sf.abarba.me/SF-UI-Display-Ultralight.otf");
+  font-family: 'Karrik Italic';
+  src: url('Karrik-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/*---------------------------------------------------------------------------*
-   * SF UI Text
-   *---------------------------------------------------------------------------*/
-
-/** Bold */
 @font-face {
-  font-family: "SF Text";
-  font-weight: 700;
-  src: url("https://sf.abarba.me/SF-UI-Text-Bold.otf");
+  font-family: 'Karrik Regular';
+  src: url('Karrik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Bold Italic */
 @font-face {
-  font-family: "SF Text";
-  font-weight: 700;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SF-UI-Text-BoldItalic.otf");
+  font-family: 'Minipax Regular';
+  src: url('Minipax-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Heavy */
 @font-face {
-  font-family: "SF Text";
-  font-weight: 800;
-  src: url("https://sf.abarba.me/SF-UI-Text-Heavy.otf");
+  font-family: 'Minipax SemiBold';
+  src: url('Minipax-SemiBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/** Heavy Italic */
 @font-face {
-  font-family: "SF Text";
-  font-weight: 800;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SF-UI-Text-HeavyItalic.otf");
-}
-
-/** Light */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 200;
-  src: url("https://sf.abarba.me/SF-UI-Text-Light.otf");
-}
-
-/** Light Italic */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 200;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SF-UI-Text-HeavyItalic.otf");
-}
-
-/** Medium */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 500;
-  src: url("https://sf.abarba.me/SF-UI-Text-Medium.otf");
-}
-
-/** Medium Italic */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 500;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SF-UI-Text-MediumItalic.otf");
-}
-
-/** Regular */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 400;
-  src: url("https://sf.abarba.me/SF-UI-Text-Regular.otf");
-}
-
-/** Regular Italic */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 400;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SF-UI-Text-RegularItalic.otf");
-}
-
-/** Semibold */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 600;
-  src: url("https://sf.abarba.me/SF-UI-Text-Semibold.otf");
-}
-
-/** Semibold Italic */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 600;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SF-UI-Text-SemiboldItalic.otf");
-}
-
-/** Ultrathin */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 100;
-  src: url("https://sf.abarba.me/SF-UI-Text-Ultrathin.otf");
-}
-
-/** Ultrathin Italic */
-@font-face {
-  font-family: "SF Text";
-  font-weight: 100;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SF-UI-Text-UltrathinItalic.otf");
-}
-
-/*---------------------------------------------------------------------------*
-   * SF Mono
-   *---------------------------------------------------------------------------*/
-
-/** Bold */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 700;
-  src: url("https://sf.abarba.me/SFMono-Bold.otf");
-}
-
-/** Bold Italic */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 700;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SFMono-BoldItalic.otf");
-}
-
-/** Heavy */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 800;
-  src: url("https://sf.abarba.me/SFMono-Heavy.otf");
-}
-
-/** Heavy Italic */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 800;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SFMono-HeavyItalic.otf");
-}
-
-/** Light */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 200;
-  src: url("https://sf.abarba.me/SFMono-Light.otf");
-}
-
-/** Light Italic */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 200;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SFMono-HeavyItalic.otf");
-}
-
-/** Medium */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 500;
-  src: url("https://sf.abarba.me/SFMono-Medium.otf");
-}
-
-/** Medium Italic */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 500;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SFMono-MediumItalic.otf");
-}
-
-/** Regular */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 400;
-  src: url("https://sf.abarba.me/SFMono-Regular.otf");
-}
-
-/** Regular Italic */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 400;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SFMono-RegularItalic.otf");
-}
-
-/** Semibold */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 600;
-  src: url("https://sf.abarba.me/SFMono-Semibold.otf");
-}
-
-/** Semibold Italic */
-@font-face {
-  font-family: "SF Mono";
-  font-weight: 600;
-  font-style: italic;
-  src: url("https://sf.abarba.me/SFMono-SemiboldItalic.otf");
+  font-family: 'Tiny180';
+  src: url('TINY5x3-180.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
