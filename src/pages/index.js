@@ -25,7 +25,7 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO title="Tyler Bainbridge" />
+      <SEO title="about" />
       <Box fontSize="20px">
         <Box maxWidth="450px">
           <Box>

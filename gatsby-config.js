@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tyler Bainbridge',
-    description: 'Full Stack Software Engineer living in Boston, MA.',
+    title: 'tyler bainbridge',
+    description:
+      'full stack software engineer living in boston (soon to be nyc)',
     url: 'https://www.tylerbainbridge.com',
     image: '/src/images/buzz-full.jpg', // Path to your image you placed in the 'static' folder
     twitterUsername: '@tjbainbridge',
-    author: 'Tyler Bainbridge',
+    author: 'tyler bainbridge',
   },
   plugins: [
     {
