@@ -103,3 +103,21 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Goudy Old Style Regular';
+
+  src: url('./GoudyOldStyleRegular.woff') format('woff'),
+    /* Modern Browsers */ url('./GoudyOldStyleRegular.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Goudy Old Style Italic';
+
+  src: url('./GoudyOldStyleItalic.woff') format('woff'),
+    /* Modern Browsers */ url('./GoudyOldStyleItalic.woff2') format('woff2'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}

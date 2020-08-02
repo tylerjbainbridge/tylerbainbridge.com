@@ -2,17 +2,21 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  /* background-color: #1201ff; */
 }
 body {
-  margin: 0;
+  /* margin: 0; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #4030ff; */
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  background-color: #fff;
 }
 body,
 html {
-  height: 100%;
+  height: 100vh;
+  /* background-color: #1201ff; */
+  background-color: #fff;
 }
 article,
 aside,

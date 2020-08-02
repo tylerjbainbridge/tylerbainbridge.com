@@ -1,46 +1,34 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
-import { Box, Text } from '@chakra-ui/core';
+import { Link as GatsbyLink, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import { Box, Text, Image, Link } from '@chakra-ui/core';
 
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
+import { ExternalLink, InternalLink } from '../components/ui';
+import Header from '../components/header';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Box p={8}>
-      <Box
-        fontFamily="body"
-        d="inline-block"
-        fontSize="24px"
-        color="gray.700"
-        // color="gray.400"
-        marginBottom="60px"
-        width="100%"
-      >
-        <Box fontFamily="special" color="brand1" as="span" fontSize="6xl">
-          Tyler Bainbridge
+// import me from '../images/buzz-square.jpg';
+
+const IndexPage = () => {
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Header />
+      <Box as="nav">
+        <Box marginBottom="10px">
+          <InternalLink to="/about" withColor>
+            &rarr; about
+          </InternalLink>
         </Box>
-        <br />
-        FULL STACK ENGINEER BASED IN BOSTON, MA.
+        {/* <Box marginBottom="10px">
+          <InternalLink to="/photography" withColor>
+            &rarr; photography
+          </InternalLink>
+        </Box> */}
       </Box>
-      <Box
-        fontFamily="body"
-        d="inline-block"
-        fontSize="2xl"
-        color="#000"
-        width="100%"
-      >
-        <Box fontFamily="special" color="brand2" as="span" fontSize="4xl">
-          Currently~
-        </Box>
-        <br />
-        FRONT END ENGINEER @ FACEBOOK
-      </Box>
-    </Box>
-  </Layout>
-);
+    </Layout>
+  );
+};
 
 export default IndexPage;

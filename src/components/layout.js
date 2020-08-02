@@ -11,22 +11,21 @@ import { Box } from '@chakra-ui/core';
 
 import '../fonts/fonts.css';
 import './layout.css';
+import { InternalLink } from './ui';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, withBack }) => {
+  // return children;
+
   return (
-    <Box
-      position="absolute"
-      top="0"
-      left="0"
-      width="100%"
-      height="100%"
-      // background="linear-gradient(180deg, rgba(0,148,174,1) 0%, rgba(28,205,66,1) 100%)"
-      // backgroundColor="#00f"
-      // backgroundColor="#4030ff"
-    >
-      <Box width="100%" as="main" d="flex" justifyContent="center">
-        <Box width="1300px">{children}</Box>
-      </Box>
+    <Box backgroundColor="#fff" height="100vh" color="#000" p="25px">
+      {withBack && (
+        <Box marginBottom="30px">
+          <InternalLink to="/" withColor>
+            &larr; back
+          </InternalLink>
+        </Box>
+      )}
+      {children}
     </Box>
   );
 };
