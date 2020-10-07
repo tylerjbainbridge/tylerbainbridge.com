@@ -62,8 +62,14 @@ const About = () => {
             </Box>
             <br />
             <Box>
-              outside of work i'm usually nerding out over music, movies,
-              fashion, film photography, food, or design.
+              outside of work you can find writing about music, movies, fashion,
+              and more at{' '}
+              <ExternalLink
+                href="https://perfectlyimperfect.substack.com/"
+                withColor
+              >
+                perfectly imperfect
+              </ExternalLink>
             </Box>
           </Box>
 
@@ -84,7 +90,7 @@ const About = () => {
             </Box>
             <br />
             <Box fontFamily="bodyItalic" as="span" fontSize="25px">
-              front end engineer
+              senior front end engineer
             </Box>{' '}
             @{' '}
             <ExternalLink href="https://www.facebook.com/" withColor>
@@ -97,6 +103,17 @@ const About = () => {
             @{' '}
             <ExternalLink href="https://www.cataloged.co/" withColor>
               cataloged
+            </ExternalLink>
+            <br />
+            <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+              writing
+            </Box>{' '}
+            @{' '}
+            <ExternalLink
+              href="https://perfectlyimperfect.substack.com/"
+              withColor
+            >
+              perfectly imperfect
             </ExternalLink>
           </Box>
           <Box
