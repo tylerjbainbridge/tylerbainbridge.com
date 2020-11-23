@@ -77,96 +77,100 @@ const About = () => {
 
           <SocialIcons />
 
-          <br />
-          <Box
-            // color="#000"
-            // color="gray.700"
-            width="100%"
-            marginBottom="30px"
-            // fontSize="25px"
-          >
-            <Box fontFamily="special" as="span">
-              currently ~
-            </Box>
-            <br />
-            <Box fontFamily="bodyItalic" as="span" fontSize="25px">
-              senior front end engineer
-            </Box>{' '}
-            @{' '}
-            <ExternalLink href="https://www.facebook.com/" withColor>
-              facebook
-            </ExternalLink>
-            <br />
-            <Box fontFamily="bodyItalic" as="span" fontSize="25px">
-              founder
-            </Box>{' '}
-            @{' '}
-            <ExternalLink href="https://www.cataloged.co/" withColor>
-              cataloged
-            </ExternalLink>
-            <br />
-            <Box fontFamily="bodyItalic" as="span" fontSize="25px">
-              writing
-            </Box>{' '}
-            @{' '}
-            <ExternalLink
-              href="https://perfectlyimperfect.substack.com/"
-              withColor
-            >
-              perfectly imperfect
-            </ExternalLink>
-          </Box>
-          <Box
-            // color="#000"
-            // color="gray.700"
-            width="100%"
-            marginBottom="30px"
-            // fontSize="25px"
-          >
-            <Box fontFamily="special" as="span">
-              previously ~
-            </Box>
-            <br />
-            <Box fontFamily="bodyItalic" as="span" fontSize="25px">
-              senior javascript engineer
-            </Box>{' '}
-            @{' '}
-            <ExternalLink href="https://www.cargurus.com/" withColor>
-              cargurus
-            </ExternalLink>
-            <br />
-            <Box fontFamily="bodyItalic" as="span" fontSize="25px">
-              director of product eng
-            </Box>{' '}
-            @{' '}
-            <ExternalLink href="https://www.conduithq.com/" withColor>
-              conduit
-            </ExternalLink>
-            <br />
-            <Box fontFamily="bodyItalic" as="span" fontSize="25px">
-              front end engineer
-            </Box>{' '}
-            @{' '}
-            <ExternalLink href="https://www.higherme.com/" withColor>
-              higherme
-            </ExternalLink>
-            <br />
-            <Box fontFamily="bodyItalic" as="span" fontSize="25px">
-              founder
-            </Box>{' '}
-            @{' '}
-            <ExternalLink href="https://www.prsmphoto.com/" withColor>
-              prism
-            </ExternalLink>
-            <br />
-            <ExternalLink
-              alt="resume"
-              href="https://drive.google.com/file/d/1wP-hCegvRzUT6wD4NcTEyk0i1RSMmIdU/view?usp=sharing"
-              withColor
-            >
-              ...
-            </ExternalLink>
-          </Box>
+          {process.env.SHOW_EXPERIENCE && (
+            <>
+              <br />
+              <Box
+                // color="#000"
+                // color="gray.700"
+                width="100%"
+                marginBottom="30px"
+                // fontSize="25px"
+              >
+                <Box fontFamily="special" as="span">
+                  currently ~
+                </Box>
+                <br />
+                <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  senior front end engineer
+                </Box>{' '}
+                @{' '}
+                <ExternalLink href="https://www.facebook.com/" withColor>
+                  facebook
+                </ExternalLink>
+                <br />
+                <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  founder
+                </Box>{' '}
+                @{' '}
+                <ExternalLink href="https://www.cataloged.co/" withColor>
+                  cataloged
+                </ExternalLink>
+                <br />
+                <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  writing
+                </Box>{' '}
+                @{' '}
+                <ExternalLink
+                  href="https://perfectlyimperfect.substack.com/"
+                  withColor
+                >
+                  perfectly imperfect
+                </ExternalLink>
+              </Box>
+              <Box
+                // color="#000"
+                // color="gray.700"
+                width="100%"
+                marginBottom="30px"
+                // fontSize="25px"
+              >
+                <Box fontFamily="special" as="span">
+                  previously ~
+                </Box>
+                <br />
+                <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  senior javascript engineer
+                </Box>{' '}
+                @{' '}
+                <ExternalLink href="https://www.cargurus.com/" withColor>
+                  cargurus
+                </ExternalLink>
+                <br />
+                <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  director of product eng
+                </Box>{' '}
+                @{' '}
+                <ExternalLink href="https://www.conduithq.com/" withColor>
+                  conduit
+                </ExternalLink>
+                <br />
+                <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  front end engineer
+                </Box>{' '}
+                @{' '}
+                <ExternalLink href="https://www.higherme.com/" withColor>
+                  higherme
+                </ExternalLink>
+                <br />
+                <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  founder
+                </Box>{' '}
+                @{' '}
+                <ExternalLink href="https://www.prsmphoto.com/" withColor>
+                  prism
+                </ExternalLink>
+                <br />
+                <ExternalLink
+                  alt="resume"
+                  href="https://drive.google.com/file/d/1wP-hCegvRzUT6wD4NcTEyk0i1RSMmIdU/view?usp=sharing"
+                  withColor
+                >
+                  ...
+                </ExternalLink>
+              </Box>
+            </>
+          )}
         </Box>
       </Box>
     </Layout>
