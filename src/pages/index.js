@@ -62,7 +62,7 @@ const About = () => {
             </Box>
             <br />
             <Box>
-              outside of work you can find writing about music, movies, fashion,
+              outside of work you can find me writing about music, movies, fashion,
               and more at{' '}
               <ExternalLink
                 href="https://perfectlyimperfect.substack.com/"
