@@ -64,7 +64,7 @@ const About = () => {
             <Box>
               you can also find me writing about music, movies, clothing, and
               more at{' '}
-              <ExternalLink href="https://perfectlyimperfect.fyi/" withColor>
+              <ExternalLink href="https://perfectlyimperfect.substack.com/" withColor>
                 perfectly imperfect
               </ExternalLink>
             </Box>
