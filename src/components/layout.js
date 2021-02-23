@@ -17,7 +17,7 @@ const Layout = ({ children, withBack }) => {
   // return children;
 
   return (
-    <Box backgroundColor="#fff" height="100vh" color="#000" p="25px">
+    <Box backgroundColor="#0000ff" height="100vh" color="#fff" p="25px">
       {withBack && (
         <Box marginBottom="30px">
           <InternalLink to="/" withColor>

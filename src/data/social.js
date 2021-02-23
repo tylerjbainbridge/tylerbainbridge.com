@@ -14,16 +14,16 @@ export default [
     url: 'mailto:hello@tylerbainbridge.com',
     Icon: FaRegEnvelope,
   },
+  // {
+  //   url: 'https://github.com/tylerjbainbridge',
+  //   Icon: FaGithub,
+  // },
+  // {
+  //   url: 'https://www.linkedin.com/in/tylerbainbridge',
+  //   Icon: FaLinkedinIn,
+  // },
   {
-    url: 'https://github.com/tylerjbainbridge',
-    Icon: FaGithub,
-  },
-  {
-    url: 'https://www.linkedin.com/in/tylerbainbridge',
-    Icon: FaLinkedinIn,
-  },
-  {
-    url: 'https://www.instagram.com/tylerjbainbridge/',
+    url: 'https://www.instagram.com/tubbytyinthetub/',
     Icon: FaInstagram,
   },
   {

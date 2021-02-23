@@ -10,13 +10,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #4030ff; */
   /* background-color: #f5f5f5; */
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #0000ff;
 }
 body,
 html {
   height: 100vh;
-  /* background-color: #1201ff; */
-  background-color: #fff;
+  background-color: #0000ff;
+  /* background-color: #fff; */
 }
 article,
 aside,

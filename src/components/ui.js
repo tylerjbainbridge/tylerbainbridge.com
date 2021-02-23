@@ -5,8 +5,9 @@ import { Link as GatsbyLink } from 'gatsby';
 const linkStyles = {
   letterSpacing: '1px',
   cursor: 'pointer',
+  fontWeight: 'bold',
   // borderBottom: '1px solid white',
-  _hover: { color: '#1201ff', borderBottom: '1px solid #1201ff' },
+  _hover: { color: '#FFFF00', borderBottom: '1px solid #FFFF00' },
 };
 
 export const ExternalLink = ({
@@ -20,7 +21,7 @@ export const ExternalLink = ({
     as="a"
     href={href}
     {...linkStyles}
-    {...(withColor ? { color: '#1201ff' } : {})}
+    {...(withColor ? { color: '#FFFF00' } : {})}
     _hover={{
       ...linkStyles._hover,
       ...(withUnderline
