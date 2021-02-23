@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
-import { Link as GatsbyLink, useStaticQuery } from 'gatsby';
+import React, { useEffect, useRef } from 'react';
+import { useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box, Text, Image, Link } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/core';
 
-import { ExternalLink, InternalLink } from '../components/ui';
+import { ExternalLink } from '../components/ui';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Header from '../components/header';
 import { SocialIcons } from '../components/social';
 
 const VIEW_MODES = {
