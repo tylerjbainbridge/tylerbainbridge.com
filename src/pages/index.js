@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link as GatsbyLink, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { Box, Text, Image, Link } from '@chakra-ui/core';
@@ -27,9 +27,13 @@ const About = () => {
     }
   `);
 
-  const urlParams = new URLSearchParams(window.location.search);
+  const urlParamsRef = useRef(null);
 
-  const showFull = urlParams.get('mode') === VIEW_MODES.FULL;
+  useEffect(() => {
+    urlParamsRef.current = new URLSearchParams(window.location.search);
+  }, []);
+
+  const showFull = urlParamsRef.current?.get('mode') === VIEW_MODES.FULL;
 
   return (
     <Layout>
