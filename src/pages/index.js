@@ -66,7 +66,7 @@ const About = () => {
             <br />
             <Box>
               you can also find him talking about music, movies, clothing, and
-              more on{' '}
+              more at{' '}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
