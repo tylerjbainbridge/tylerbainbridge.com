@@ -16,7 +16,7 @@ const VIEW_MODES = {
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "selfie.jpg" }) {
+      placeholderImage: file(relativePath: { eq: "deck.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -68,8 +68,8 @@ const About = () => {
             </Box>
             <br />
             <Box>
-              you can also find him talking about music, movies, clothing, and
-              more at{' '}
+              you can find him talking about music, movies, clothing, and more
+              at{' '}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
