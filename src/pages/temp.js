@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link as GatsbyLink, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import { Box, Text, Image, Link } from '@chakra-ui/core';
+import { Box, Text, Image, Link } from '@chakra-ui/react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';

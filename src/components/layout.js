@@ -7,9 +7,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 
-import '../fonts/fonts.css';
 import './layout.css';
 import { InternalLink } from './ui';
 
@@ -17,7 +16,13 @@ const Layout = ({ children, withBack }) => {
   // return children;
 
   return (
-    <Box backgroundColor="#0000ff" height="100vh" color="#fff" p="25px">
+    <Box
+      backgroundColor="#0000ff"
+      height="100vh"
+      color="#fff"
+      p="30px"
+      fontFamily="Times New Roman"
+    >
       {withBack && (
         <Box marginBottom="30px">
           <InternalLink to="/" withColor>

@@ -4,7 +4,7 @@ module.exports = {
     description:
       'full stack software engineer living in boston (soon to be nyc)',
     url: 'https://www.tylerbainbridge.com',
-    image: '/src/images/buzz-full.jpg', // Path to your image you placed in the 'static' folder
+    image: '/src/images/smiley.jpg', // Path to your image you placed in the 'static' folder
     twitterUsername: '@tjbainbridge',
     author: 'tyler bainbridge',
   },
@@ -14,7 +14,7 @@ module.exports = {
       options: { paths: ['/old/**'] },
     },
     {
-      resolve: 'gatsby-plugin-chakra-ui',
+      resolve: '@chakra-ui/gatsby-plugin',
       options: {
         isResettingCSS: true,
         isUsingColorMode: false,

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Box, Text, Image, Link } from '@chakra-ui/core';
+import { Box, Text, Image, Link } from '@chakra-ui/react';
 
 import { ExternalLink, InternalLink } from '../components/ui';
 import social from '../data/social';

@@ -1,6 +1,6 @@
 import React from 'react';
 import social from '../data/social';
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 import { ExternalLink } from './ui';
 
 export const SocialIcons = () => (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { PseudoBox } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 import { Link as GatsbyLink } from 'gatsby';
 
 const linkStyles = {
@@ -17,7 +17,7 @@ export const ExternalLink = ({
   withColor = false,
   ...props
 }) => (
-  <PseudoBox
+  <Box
     as="a"
     href={href}
     {...linkStyles}
@@ -32,11 +32,11 @@ export const ExternalLink = ({
     target="_blank"
   >
     {children}
-  </PseudoBox>
+  </Box>
 );
 
 export const InternalLink = ({ to, children, withColor = false, ...props }) => (
-  <PseudoBox
+  <Box
     as={GatsbyLink}
     to={to}
     {...linkStyles}
@@ -44,5 +44,5 @@ export const InternalLink = ({ to, children, withColor = false, ...props }) => (
     {...props}
   >
     {children}
-  </PseudoBox>
+  </Box>
 );
