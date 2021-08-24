@@ -45,13 +45,11 @@ const About = () => {
     '2xl': '2xl',
   });
 
-  console.log(breakpoint);
-
   const showPhotoOnSide = !['sm', 'md'].includes(breakpoint);
 
   return (
     <Layout>
-      <SEO title="about" />
+      <SEO />
       <Box fontSize="23px" display="flex">
         {showPhotoOnSide && (
           <Box width="450px" height="auto" marginRight="30px">
@@ -92,7 +90,7 @@ const About = () => {
               <Box as="span" fontWeight="bold">
                 software engineer
               </Box>{' '}
-              and co-founder of{' '}
+              and the founder of{' '}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
@@ -103,7 +101,7 @@ const About = () => {
             </Box>
             <br />
             <Box as="p">
-              you can email me at{' '}
+              shoot me an email me at{' '}
               <ExternalLink href="mailto:hello@tylerbainbridge.com" withColor>
                 hello@tylerbainbridge.com
               </ExternalLink>
@@ -114,7 +112,6 @@ const About = () => {
           <Box
             width="100%"
             marginBottom="30px"
-            fontSize="20px"
             // maxWidth="600px"
           >
             <Box as="span">press...</Box>

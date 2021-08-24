@@ -13,8 +13,6 @@ import './layout.css';
 import { InternalLink } from './ui';
 
 const Layout = ({ children, withBack }) => {
-  // return children;
-
   return (
     <Box
       backgroundColor="#0000ff"
