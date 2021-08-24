@@ -64,7 +64,7 @@ const About = () => {
             />
           </Box>
         )}
-        <Box>
+        <Box paddingTop="15px">
           <Box maxWidth="600px">
             {/* <Box fontFamily="special">who is</Box> */}
             {/* <Box fontSize="30px" letterSpacing="7px" fontWeight="bolder">
