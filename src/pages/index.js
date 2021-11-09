@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import { Box } from '@chakra-ui/react';
-import { useBreakpointValue } from '@chakra-ui/react';
+import React, { useEffect, useRef } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import { Box } from "@chakra-ui/react";
+import { useBreakpointValue } from "@chakra-ui/react";
 
-import { ExternalLink } from '../components/ui';
+import { ExternalLink } from "../components/ui";
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import { SocialIcons } from '../components/social';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { SocialIcons } from "../components/social";
 
 const VIEW_MODES = {
-  FULL: 'FULL',
+  FULL: "FULL",
 };
 
 const IMAGE_RIGHT = true;
@@ -19,7 +19,7 @@ const IMAGE_RIGHT = true;
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "steps.jpeg" }) {
+      placeholderImage: file(relativePath: { eq: "tylerpihat.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -35,17 +35,17 @@ const About = () => {
     urlParamsRef.current = new URLSearchParams(window.location.search);
   }, []);
 
-  const showFull = urlParamsRef.current?.get('mode') === VIEW_MODES.FULL;
+  const showFull = urlParamsRef.current?.get("mode") === VIEW_MODES.FULL;
 
   const breakpoint = useBreakpointValue({
-    sm: 'sm',
-    md: 'md',
-    lg: 'lg',
-    xl: 'xl',
-    '2xl': '2xl',
+    sm: "sm",
+    md: "md",
+    lg: "lg",
+    xl: "xl",
+    "2xl": "2xl",
   });
 
-  const showPhotoOnSide = !['sm', 'md'].includes(breakpoint);
+  const showPhotoOnSide = !["sm", "md"].includes(breakpoint);
 
   return (
     <Layout>
@@ -58,7 +58,7 @@ const About = () => {
               width="450px"
               height="auto"
               imgStyle={{
-                border: '15px solid #FFFF00',
+                border: "15px solid #FFFF00",
               }}
               fluid={data.placeholderImage.childImageSharp.fluid}
             />
@@ -74,23 +74,26 @@ const About = () => {
             <Box as="p">hi there.</Box>
             <br />
             <Box as="p">
-              my name is{' '}
+              my name is{" "}
               <ExternalLink
                 href="https://www.instagram.com/tubbytyinthetub/"
                 fontWeight="bold"
                 withColor
               >
                 tyler bainbridge
-              </ExternalLink>{' '}
+              </ExternalLink>{" "}
               and i live in nyc.
             </Box>
             <br />
             <Box as="p">
-              i'm a{' '}
-              <Box as="span" fontWeight="bold">
+              i'm a{" "}
+              <ExternalLink
+                href="https://github.com/tylerjbainbridge"
+                withColor
+              >
                 software engineer
-              </Box>{' '}
-              and the founder of{' '}
+              </ExternalLink>{" "}
+              and cofounder of{" "}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
@@ -101,7 +104,7 @@ const About = () => {
             </Box>
             <br />
             <Box as="p">
-              shoot me an email me at{' '}
+              shoot me an email me at{" "}
               <ExternalLink href="mailto:hello@tylerbainbridge.com" withColor>
                 hello@tylerbainbridge.com
               </ExternalLink>
@@ -114,7 +117,7 @@ const About = () => {
             marginBottom="30px"
             // maxWidth="600px"
           >
-            <Box as="span">press...</Box>
+            <Box as="span">press and more...</Box>
             <br />
             <ExternalLink
               href="https://coolstuff.nyc/Cool-Friends-Tyler-Bainbridge-Perfectly-Imperfect"
@@ -130,6 +133,14 @@ const About = () => {
               withColor
             >
               Are Tastemakers the New Influencers? (Lithium Magazine)
+            </ExternalLink>
+            <br />
+            <ExternalLink
+              href="https://open.spotify.com/playlist/56JudP6hJScQuJlaMz9RFE?si=d622936fcca74de9"
+              fontStyle="italic"
+              withColor
+            >
+              Music to Clean to Vol 13 (Intramural Shop)
             </ExternalLink>
             <br />
             <ExternalLink
@@ -157,7 +168,7 @@ const About = () => {
               <br />
               <Img
                 // style={{ marginBottom: 20 }}
-                imgStyle={{ border: '10px solid #FFFF00' }}
+                imgStyle={{ border: "10px solid #FFFF00" }}
                 fluid={data.placeholderImage.childImageSharp.fluid}
               />
               <br />
@@ -175,8 +186,8 @@ const About = () => {
                   <br />
                   <Box fontFamily="bodyItalic" as="span" fontSize="25px">
                     senior front end engineer
-                  </Box>{' '}
-                  @{' '}
+                  </Box>{" "}
+                  @{" "}
                   <ExternalLink href="https://www.facebook.com/" withColor>
                     facebook
                   </ExternalLink>
@@ -191,8 +202,8 @@ const About = () => {
                   <br /> */}
                   <Box fontFamily="bodyItalic" as="span" fontSize="25px">
                     writing
-                  </Box>{' '}
-                  @{' '}
+                  </Box>{" "}
+                  @{" "}
                   <ExternalLink
                     href="https://www.perfectlyimperfect.fyi/"
                     withColor
@@ -207,32 +218,32 @@ const About = () => {
                   <br />
                   <Box fontFamily="bodyItalic" as="span" fontSize="25px">
                     senior javascript engineer
-                  </Box>{' '}
-                  @{' '}
+                  </Box>{" "}
+                  @{" "}
                   <ExternalLink href="https://www.cargurus.com/" withColor>
                     cargurus
                   </ExternalLink>
                   <br />
                   <Box fontFamily="bodyItalic" as="span" fontSize="25px">
                     director of product eng
-                  </Box>{' '}
-                  @{' '}
+                  </Box>{" "}
+                  @{" "}
                   <ExternalLink href="https://www.conduithq.com/" withColor>
                     conduit
                   </ExternalLink>
                   <br />
                   <Box fontFamily="bodyItalic" as="span" fontSize="25px">
                     front end engineer
-                  </Box>{' '}
-                  @{' '}
+                  </Box>{" "}
+                  @{" "}
                   <ExternalLink href="https://www.higherme.com/" withColor>
                     higherme
                   </ExternalLink>
                   <br />
                   <Box fontFamily="bodyItalic" as="span" fontSize="25px">
                     founder
-                  </Box>{' '}
-                  @{' '}
+                  </Box>{" "}
+                  @{" "}
                   <ExternalLink href="https://www.prsmphoto.com/" withColor>
                     prism
                   </ExternalLink>
