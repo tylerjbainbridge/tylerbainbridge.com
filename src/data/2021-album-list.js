@@ -2,6 +2,8 @@ export const albums = [
   {
     artist: 'Dean Blunt',
     album: 'Black Metal 2',
+    embed:
+      '<iframe src="https://open.spotify.com/embed/album/33xbAWdpX79o2YtXBiBWQv" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
   },
   {
     artist: 'Bladee',
@@ -17,15 +19,11 @@ export const albums = [
   },
   {
     artist: 'CFCF',
-    album: 'memory land',
+    album: 'Memoryland',
   },
   {
     artist: 'dltzk',
     album: 'Frailty',
-  },
-  {
-    artist: 'Injury Reserve',
-    album: 'By the Time I get to Phoenix',
   },
   {
     artist: 'Dry Cleaning',
@@ -40,16 +38,25 @@ export const albums = [
     album: 'Foreign Exchange',
   },
   {
-    artist: 'JPEGMafia',
-    album: 'LP!',
+    artist: 'Little Simz',
+    album: 'Sometimes I Might Be Introvert',
   },
   {
     artist: 'The Hellp',
     album: 'Enemy',
   },
   {
+    artist: 'JPEGMafia',
+    album: 'LP!',
+  },
+
+  {
     artist: 'Rochelle Jordan',
     album: 'Play With the Changes',
+  },
+  {
+    artist: 'Injury Reserve',
+    album: 'By the Time I get to Phoenix',
   },
   {
     artist: '파란노을 [Parannoul]',
@@ -107,16 +114,13 @@ export const albums = [
     artist: 'LSDXOXO',
     album: 'Dedicated 2 Disrespect',
   },
-  {
-    artist: 'Little Simz',
-    album: 'Sometimes I Might Be Introvert',
-  },
+
   {
     artist: 'Turnstile',
     album: 'Glow On',
   },
   {
-    artist: 'Lana Del Rey',
-    album: 'Blue Banisters',
+    artist: 'Japanese Breakfast',
+    album: 'Jubilee',
   },
 ];

@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import { Box } from '@chakra-ui/react';
 import { useBreakpointValue } from '@chakra-ui/react';
 
-import { ExternalLink } from '../components/ui';
+import { ExternalLink, InternalLink } from '../components/ui';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -14,12 +14,10 @@ const VIEW_MODES = {
   FULL: 'FULL',
 };
 
-const IMAGE_RIGHT = true;
-
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "steps.jpeg" }) {
+      placeholderImage: file(relativePath: { eq: "tylerpihat.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -50,7 +48,7 @@ const About = () => {
   return (
     <Layout>
       <SEO />
-      <Box fontSize="23px" display="flex">
+      <Box fontSize="20px" display="flex">
         {showPhotoOnSide && (
           <Box width="450px" height="auto" marginRight="30px">
             <Img
@@ -87,10 +85,13 @@ const About = () => {
             <br />
             <Box as="p">
               i'm a{' '}
-              <Box as="span" fontWeight="bold">
+              <ExternalLink
+                href="https://github.com/tylerjbainbridge"
+                withColor
+              >
                 software engineer
-              </Box>{' '}
-              and co-founder of{' '}
+              </ExternalLink>{' '}
+              and cofounder of{' '}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
@@ -111,10 +112,10 @@ const About = () => {
           <br />
           <Box
             width="100%"
-            marginBottom="30px"
+
             // maxWidth="600px"
           >
-            <Box as="span">press...</Box>
+            <Box as="span">press and more...</Box>
             <br />
             <ExternalLink
               href="https://coolstuff.nyc/Cool-Friends-Tyler-Bainbridge-Perfectly-Imperfect"
@@ -133,6 +134,14 @@ const About = () => {
             </ExternalLink>
             <br />
             <ExternalLink
+              href="https://open.spotify.com/playlist/56JudP6hJScQuJlaMz9RFE?si=d622936fcca74de9"
+              fontStyle="italic"
+              withColor
+            >
+              Music to Clean to Vol 13 (Intramural Shop)
+            </ExternalLink>
+            <br />
+            <ExternalLink
               href="https://on.substack.com/p/what-to-read-tyler-alex-and-serey"
               fontStyle="italic"
               withColor
@@ -148,6 +157,18 @@ const About = () => {
             >
               Perfectly Imperfect Recommends Recipes (Sifted)
             </ExternalLink>
+          </Box>
+          <br />
+          <Box
+            width="100%"
+            marginBottom="30px"
+            // maxWidth="600px"
+          >
+            <Box as="span">other stuff...</Box>
+            <br />
+            <InternalLink href="/2021-album-list" fontStyle="italic" withColor>
+              My 2021 Albums of the Year
+            </InternalLink>
           </Box>
 
           <SocialIcons />
@@ -173,7 +194,7 @@ const About = () => {
                     currently ~
                   </Box>
                   <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     senior front end engineer
                   </Box>{' '}
                   @{' '}
@@ -181,7 +202,7 @@ const About = () => {
                     facebook
                   </ExternalLink>
                   <br />
-                  {/* <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  {/* <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     founder
                   </Box>{' '}
                   @{' '}
@@ -189,7 +210,7 @@ const About = () => {
                     cataloged
                   </ExternalLink>
                   <br /> */}
-                  <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     writing
                   </Box>{' '}
                   @{' '}
@@ -205,7 +226,7 @@ const About = () => {
                     previously ~
                   </Box>
                   <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     senior javascript engineer
                   </Box>{' '}
                   @{' '}
@@ -213,7 +234,7 @@ const About = () => {
                     cargurus
                   </ExternalLink>
                   <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     director of product eng
                   </Box>{' '}
                   @{' '}
@@ -221,7 +242,7 @@ const About = () => {
                     conduit
                   </ExternalLink>
                   <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     front end engineer
                   </Box>{' '}
                   @{' '}
@@ -229,7 +250,7 @@ const About = () => {
                     higherme
                   </ExternalLink>
                   <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="25px">
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     founder
                   </Box>{' '}
                   @{' '}

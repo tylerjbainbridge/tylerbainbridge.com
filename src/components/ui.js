@@ -35,12 +35,24 @@ export const ExternalLink = ({
   </Box>
 );
 
-export const InternalLink = ({ to, children, withColor = false, ...props }) => (
+export const InternalLink = ({
+  to,
+  children,
+  withColor = false,
+  withUnderline = true,
+  ...props
+}) => (
   <Box
     as={GatsbyLink}
     to={to}
     {...linkStyles}
-    {...(withColor ? { color: '#1201ff' } : {})}
+    {...(withColor ? { color: '#FFFF00' } : {})}
+    _hover={{
+      ...linkStyles._hover,
+      ...(withUnderline
+        ? { borderBottom: linkStyles._hover.borderBottom }
+        : { borderBottom: null }),
+    }}
     {...props}
   >
     {children}

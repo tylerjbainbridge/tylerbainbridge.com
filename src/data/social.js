@@ -14,10 +14,7 @@ export default [
     url: 'mailto:hello@tylerbainbridge.com',
     Icon: FaRegEnvelope,
   },
-  // {
-  //   url: 'https://github.com/tylerjbainbridge',
-  //   Icon: FaGithub,
-  // },
+
   // {
   //   url: 'https://www.linkedin.com/in/tylerbainbridge',
   //   Icon: FaLinkedinIn,
@@ -37,5 +34,9 @@ export default [
   {
     url: 'https://open.spotify.com/user/1286951915?si=74ZnWWCST_GcpCQMCqKGfw',
     Icon: FaSpotify,
+  },
+  {
+    url: 'https://github.com/tylerjbainbridge',
+    Icon: FaGithub,
   },
 ];

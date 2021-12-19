@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import { Box } from '@chakra-ui/react';
 import { useBreakpointValue } from '@chakra-ui/react';
 
-import { ExternalLink } from '../components/ui';
+import { InternalLink, ExternalLink } from '../components/ui';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -20,7 +20,9 @@ const IMAGE_RIGHT = true;
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "steps.jpeg" }) {
+      placeholderImage: file(
+        relativePath: { eq: "2021-albums-graphic-wide.png" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -51,12 +53,49 @@ const About = () => {
   return (
     <Layout>
       <SEO />
-      <Box fontSize="23px" display="flex">
-        <ul>
-          {albums.map(({ artist, album }) => {
-            return <li>{album}</li>;
+      <Box maxWidth="700px">
+        <Box fontSize="25px" fontWeight="bold">
+          My 2021 Albums (and EPs) of the Year
+        </Box>
+        <br />
+        <Img
+          // style={{ maxWidth: '50%' }}
+          imgStyle={{ border: '10px solid #FFFF00' }}
+          fluid={data.placeholderImage.childImageSharp.fluid}
+        />
+        <br />
+
+        <Box as="p">
+          People seem to like numbered lists. But just consider this a very
+          loosely ranked set of albums I enjoyed this year and don't take it too
+          seriously. Enjoy :)
+        </Box>
+
+        <Box as="ol" fontSize="20px" margin="20px" paddingBottom="50px">
+          {albums.map(({ artist, album, embed = null }, index) => {
+            return (
+              <Box as="li" color="#FFFF00">
+                <ExternalLink
+                  href={`http://www.google.com/search?q=${artist} ${album}`}
+                >
+                  {artist} - {album}
+                </ExternalLink>
+                {/* {embed && (
+                <Box
+                  dangerouslySetInnerHTML={{ __html: embed }}
+                  maxWidth="300px"
+                />
+              )} */}
+              </Box>
+            );
           })}
-        </ul>
+          <br />
+          <InternalLink href="/" fontStyle="italic" withColor>
+            Back home...
+          </InternalLink>
+          <br />
+          <SocialIcons />
+        </Box>
       </Box>
     </Layout>
   );
