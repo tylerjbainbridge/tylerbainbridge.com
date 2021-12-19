@@ -71,10 +71,16 @@ const About = () => {
           seriously. Enjoy :)
         </Box>
 
-        <Box as="ol" fontSize="18px" margin="20px" paddingBottom="50px">
+        <Box
+          as="ol"
+          fontSize="25px"
+          fontWeight="bold"
+          margin="20px"
+          paddingBottom="50px"
+        >
           {albums.map(({ artist, album, embed = null }, index) => {
             return (
-              <Box as="li" color="#FFFF00">
+              <Box as="li" color="#FFFF00" marginBottom="2px">
                 <ExternalLink
                   href={`http://www.google.com/search?q=${artist} ${album}`}
                 >

@@ -79,10 +79,6 @@ export const albums = [
     album: 'Volcanic Bird Enemy and the Voiced Concern',
   },
   {
-    artist: 'Olivia Rodrigo',
-    album: 'SOUR',
-  },
-  {
     artist: 'Spellling',
     album: 'The Turning Wheel',
   },
@@ -95,19 +91,24 @@ export const albums = [
     album: 'fishmonger',
   },
   {
+    artist: 'Andy Stott',
+    album: 'Never the Right Time',
+  },
+  {
     artist: 'Black Midi',
     album: 'Cavalcade',
   },
   {
-    artist: 'Andy Stott',
-    album: 'Never the Right Time',
+    artist: 'Lana Del Rey',
+    album: 'Blue Banisters',
   },
+
   {
     artist: 'Danny L Harle',
     album: 'Harlecore',
   },
   {
-    artist: 'shame',
+    artist: 'Shame',
     album: 'Drunk Tank Pink',
   },
   {
