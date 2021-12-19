@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, image, title }) {
             ? [
                 {
                   property: 'og:image',
-                  content: data.site.siteMetadata.url + image,
+                  content: site.siteMetadata.url + image,
                 },
                 {
                   property: 'og:image:width',
