@@ -53,7 +53,7 @@ const About = () => {
   return (
     <Layout>
       <SEO
-        image={data.placeholderImage.childImageSharp.fluid}
+        image={data.placeholderImage.childImageSharp.fluid.src}
         title="My 2021 Albums (and EPs) of the Year"
         description="Rx Papi, Dry Cleaning, Kanye West, and more."
       />
