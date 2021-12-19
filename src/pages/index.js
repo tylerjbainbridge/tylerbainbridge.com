@@ -90,7 +90,7 @@ const About = () => {
               <Box as="span" fontWeight="bold">
                 software engineer
               </Box>{' '}
-              and the founder of{' '}
+              and co-founder of{' '}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
