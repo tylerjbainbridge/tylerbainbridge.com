@@ -53,7 +53,7 @@ const About = () => {
   return (
     <Layout>
       <SEO />
-      <Box maxWidth="700px">
+      <Box maxWidth="800px">
         <Box fontSize="25px" fontWeight="bold">
           My 2021 Albums (and EPs) of the Year
         </Box>
@@ -73,7 +73,7 @@ const About = () => {
 
         <Box
           as="ol"
-          fontSize="25px"
+          fontSize="20px"
           fontWeight="bold"
           margin="20px"
           paddingBottom="50px"
