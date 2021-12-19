@@ -47,7 +47,11 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO
+        title="Tyler's Website"
+        description="Newsletter guy & Software Engineer"
+        image={data.placeholderImage.childImageSharp.fluid.src}
+      />
       <Box fontSize="20px" display="flex">
         {showPhotoOnSide && (
           <Box width="450px" height="auto" marginRight="30px">
