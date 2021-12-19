@@ -43,7 +43,7 @@ const About = () => {
     '2xl': '2xl',
   });
 
-  const showPhotoOnSide = !['sm', 'md'].includes(breakpoint);
+  const showPhotoOnSide = ['2x', 'xl', 'lg'].includes(breakpoint);
 
   return (
     <Layout>
