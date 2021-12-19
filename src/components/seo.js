@@ -10,8 +10,8 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, image, title }) {
-  const { site } = useStaticQuery(
+function SEO({ description, lang, meta, image: metaImage, title }) {
+  const { site, placeholderImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -22,11 +22,21 @@ function SEO({ description, lang, meta, image, title }) {
             url
           }
         }
+
+        placeholderImage: file(relativePath: { eq: "smiley.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `
   );
 
   const metaDescription = description || site.siteMetadata.description;
+
+  const image = metaImage || placeholderImage.childImageSharp.fluid.src;
 
   return (
     <Helmet

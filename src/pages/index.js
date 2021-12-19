@@ -50,7 +50,6 @@ const About = () => {
       <SEO
         title="Tyler's Website"
         description="Newsletter guy & Software Engineer"
-        image={data.placeholderImage.childImageSharp.fluid.src}
       />
       <Box fontSize="20px" display="flex">
         {showPhotoOnSide && (

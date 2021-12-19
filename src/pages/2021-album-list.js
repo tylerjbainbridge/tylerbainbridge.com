@@ -54,26 +54,26 @@ const About = () => {
     <Layout>
       <SEO
         image={data.placeholderImage.childImageSharp.fluid.src}
-        title="My 2021 Albums (and EPs) of the Year"
-        description="Rx Papi, Dry Cleaning, Kanye West, and more."
+        title="my 2021 albums of the year"
+        description="rx papi, dry cleaning, kanye west, and more."
       />
       <Box maxWidth="800px">
         <Box fontSize="25px" fontWeight="bold">
-          My 2021 Albums (and EPs) of the Year
+          my 2021 albums of the year
         </Box>
         <br />
+        <Box as="p">
+          people seem to like numbered lists. but just consider this a very
+          loosely ranked set of albums i enjoyed this year and don't take it too
+          seriously. enjoy :)
+        </Box>
+        <br />
+
         <Img
           // style={{ maxWidth: '50%' }}
           imgStyle={{ border: '10px solid #FFFF00' }}
           fluid={data.placeholderImage.childImageSharp.fluid}
         />
-        <br />
-
-        <Box as="p">
-          People seem to like numbered lists. But just consider this a very
-          loosely ranked set of albums I enjoyed this year and don't take it too
-          seriously. Enjoy :)
-        </Box>
 
         <Box
           as="ol"
@@ -88,7 +88,7 @@ const About = () => {
                 <ExternalLink
                   href={`http://www.google.com/search?q=${artist} ${album}`}
                 >
-                  {artist} - {album}
+                  {artist.toLowerCase()} - {album.toLowerCase()}
                 </ExternalLink>
                 {/* {embed && (
                 <Box
@@ -101,7 +101,7 @@ const About = () => {
           })}
           <br />
           <InternalLink href="/" fontStyle="italic" withColor>
-            Back home...
+            back home...
           </InternalLink>
           <br />
           <SocialIcons />
