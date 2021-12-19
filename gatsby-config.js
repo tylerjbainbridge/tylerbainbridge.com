@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'tyler bainbridge',
-    description:
-      'full stack software engineer living in boston (soon to be nyc)',
+    description: 'newsletter guy and software engineer',
     url: 'https://www.tylerbainbridge.com',
     image: '/src/images/smiley.jpg', // Path to your image you placed in the 'static' folder
     twitterUsername: '@tjbainbridge',
