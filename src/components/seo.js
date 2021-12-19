@@ -19,7 +19,7 @@ function SEO({ description, lang, meta, image, title }) {
             title
             description
             author
-            siteUrl
+            url
           }
         }
       }
@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, image, title }) {
             ? [
                 {
                   property: 'og:image',
-                  content: data.site.siteMetadata.siteUrl + image,
+                  content: data.site.siteMetadata.url + image,
                 },
                 {
                   property: 'og:image:width',
