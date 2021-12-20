@@ -108,6 +108,13 @@ const About = () => {
               shoot me an email me at{' '}
               <ExternalLink href="mailto:hello@tylerbainbridge.com" withColor>
                 hello@tylerbainbridge.com
+              </ExternalLink>{' '}
+              or message me on{' '}
+              <ExternalLink
+                href="https://www.instagram.com/tubbytyinthetub/"
+                withColor
+              >
+                instagram
               </ExternalLink>
               .
             </Box>
