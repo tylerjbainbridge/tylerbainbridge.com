@@ -17,7 +17,7 @@ const VIEW_MODES = {
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "tylerpihat.jpeg" }) {
+      placeholderImage: file(relativePath: { eq: "balloon-head.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -72,7 +72,9 @@ const About = () => {
               tyler bainbridge
             </Box> */}
 
-            <Box as="p">hi there.</Box>
+            <Box as="p">
+              <em>hi there.</em>
+            </Box>
             <br />
             <Box as="p">
               my name is{' '}

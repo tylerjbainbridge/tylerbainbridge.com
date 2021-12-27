@@ -10,10 +10,6 @@ export const albums = [
     album: 'The Fool',
   },
   {
-    artist: 'Squid',
-    album: 'Bright Green Field',
-  },
-  {
     artist: 'Kanye West',
     album: 'Donda',
   },
@@ -22,24 +18,30 @@ export const albums = [
     album: 'Memoryland',
   },
   {
-    artist: 'dltzk',
-    album: 'Frailty',
+    artist: 'Squid',
+    album: 'Bright Green Field',
   },
+
   {
     artist: 'Dry Cleaning',
     album: 'New Long Leg',
   },
   {
-    artist: 'Faye Webster',
-    album: 'I Know I’m Funny haha',
+    artist: 'dltzk',
+    album: 'Frailty',
+  },
+
+  {
+    artist: 'Little Simz',
+    album: 'Sometimes I Might Be Introvert',
   },
   {
     artist: 'Rx Papi, Gud',
     album: 'Foreign Exchange',
   },
   {
-    artist: 'Little Simz',
-    album: 'Sometimes I Might Be Introvert',
+    artist: 'Faye Webster',
+    album: 'I Know I’m Funny haha',
   },
   {
     artist: 'The Hellp',

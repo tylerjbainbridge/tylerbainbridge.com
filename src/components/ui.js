@@ -22,6 +22,7 @@ export const ExternalLink = ({
     href={href}
     {...linkStyles}
     {...(withColor ? { color: '#FFFF00' } : {})}
+    paddingBottom="1px"
     _hover={{
       ...linkStyles._hover,
       ...(withUnderline

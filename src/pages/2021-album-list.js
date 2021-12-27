@@ -54,12 +54,12 @@ const About = () => {
     <Layout>
       <SEO
         image={data.placeholderImage.childImageSharp.fluid.src}
-        title="my 2021 albums of the year"
-        description="rx papi, dry cleaning, kanye west, and more."
+        title="tyler's favorite albums of 2021"
+        description="rx papi, dry cleaning, cfcf, and more."
       />
       <Box maxWidth="800px">
         <Box fontSize="25px" fontWeight="bold">
-          my 2021 albums of the year
+          tyler's favorite albums of 2021
         </Box>
         <br />
         <Box as="p">
@@ -75,20 +75,21 @@ const About = () => {
           fluid={data.placeholderImage.childImageSharp.fluid}
         />
 
-        <Box
-          as="ol"
-          fontSize="20px"
-          fontWeight="bold"
-          margin="20px"
-          paddingBottom="50px"
-        >
+        <Box as="ol" fontSize="20px" margin="20px" paddingBottom="50px">
           {albums.map(({ artist, album, embed = null }, index) => {
             return (
               <Box as="li" color="#FFFF00" marginBottom="2px">
                 <ExternalLink
+                  fontWeight="normal"
                   href={`http://www.google.com/search?q=${artist} ${album}`}
                 >
-                  {artist.toLowerCase()} - {album.toLowerCase()}
+                  <Box as="span" fontWeight="bold">
+                    {artist.toLowerCase()}
+                  </Box>{' '}
+                  -{' '}
+                  <Box as="em" fontWeight="normal">
+                    {album.toLowerCase()}
+                  </Box>
                 </ExternalLink>
                 {/* {embed && (
                 <Box
