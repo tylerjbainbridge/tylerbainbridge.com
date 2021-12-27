@@ -4,19 +4,23 @@ import { Box } from '@chakra-ui/react';
 import { ExternalLink } from './ui';
 
 export const SocialIcons = () => (
-  <Box
-    style={{
-      height: 40,
-      width: social.length * 40,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-    }}
-  >
-    {social.map(({ url, Icon }) => (
-      <ExternalLink href={url} target="_blank" withUnderline={false}>
-        <Icon />
-      </ExternalLink>
-    ))}
-  </Box>
+  <>
+    --
+    <Box
+      style={{
+        height: 40,
+        width: social.length * 40,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        color: '#FFFF00',
+      }}
+    >
+      {social.map(({ url, Icon }) => (
+        <ExternalLink href={url} target="_blank" withUnderline={false}>
+          <Icon />
+        </ExternalLink>
+      ))}
+    </Box>
+  </>
 );

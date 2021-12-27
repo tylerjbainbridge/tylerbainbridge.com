@@ -72,9 +72,7 @@ const About = () => {
               tyler bainbridge
             </Box> */}
 
-            <Box as="p">
-              <em>hi there.</em>
-            </Box>
+            <Box as="p">hi there</Box>
             <br />
             <Box as="p">
               my name is{' '}
@@ -127,7 +125,7 @@ const About = () => {
 
             // maxWidth="600px"
           >
-            <Box as="span">press and more...</Box>
+            <Box as="span">**press and more**</Box>
             <br />
             <ExternalLink
               href="https://coolstuff.nyc/Cool-Friends-Tyler-Bainbridge-Perfectly-Imperfect"
@@ -176,7 +174,7 @@ const About = () => {
             marginBottom="30px"
             // maxWidth="600px"
           >
-            <Box as="span">other stuff...</Box>
+            <Box as="span">**other stuff**</Box>
             <br />
             <InternalLink href="/2021-album-list" fontStyle="italic" withColor>
               My 2021 Albums of the Year
