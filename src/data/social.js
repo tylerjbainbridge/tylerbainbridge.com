@@ -1,5 +1,5 @@
 import {
-  FaLinkedinIn,
+  FaTwitter,
   FaRegEnvelope,
   FaGithub,
   FaInstagram,
@@ -22,6 +22,10 @@ export default [
   {
     url: 'https://www.instagram.com/tubbytyinthetub/',
     Icon: FaInstagram,
+  },
+  {
+    url: 'https://twitter.com/tjbainbridge',
+    Icon: FaTwitter,
   },
   {
     url: 'https://www.last.fm/user/tylerbainbridge',

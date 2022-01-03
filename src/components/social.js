@@ -18,7 +18,7 @@ export const SocialIcons = () => (
     >
       {social.map(({ url, Icon }) => (
         <ExternalLink href={url} target="_blank" withUnderline={false}>
-          <Icon />
+          <Icon size={20} />
         </ExternalLink>
       ))}
     </Box>

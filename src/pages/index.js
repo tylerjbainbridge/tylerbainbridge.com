@@ -72,7 +72,7 @@ const About = () => {
               tyler bainbridge
             </Box> */}
 
-            <Box as="p">hi there</Box>
+            <Box as="p">hi there.</Box>
             <br />
             <Box as="p">
               my name is{' '}
@@ -83,7 +83,7 @@ const About = () => {
               >
                 tyler bainbridge
               </ExternalLink>{' '}
-              and i live in nyc.
+              and i live in new york city.
             </Box>
             <br />
             <Box as="p">
@@ -94,7 +94,7 @@ const About = () => {
               >
                 software engineer
               </ExternalLink>{' '}
-              and cofounder of{' '}
+              and founder of{' '}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
