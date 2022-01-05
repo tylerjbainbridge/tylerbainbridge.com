@@ -53,10 +53,10 @@ const About = () => {
       />
       <Box fontSize="20px" display="flex">
         {showPhotoOnSide && (
-          <Box width="450px" height="auto" marginRight="30px">
+          <Box width="700px" height="auto" marginRight="30px">
             <Img
               // style={{ marginBottom: 20 }}
-              width="500px"
+              width="700px"
               height="auto"
               imgStyle={{
                 border: "15px solid #FFFF00",
