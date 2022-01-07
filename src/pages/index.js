@@ -43,7 +43,9 @@ const About = () => {
     "2xl": "2xl",
   });
 
-  const showPhotoOnSide = !["sm", "md"].includes(breakpoint);
+  console.log({ breakpoint });
+
+  const showPhotoOnSide = breakpoint && !["sm", "md"].includes(breakpoint);
 
   return (
     <Layout>
