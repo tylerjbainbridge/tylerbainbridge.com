@@ -94,16 +94,23 @@ const About = () => {
                 href="https://github.com/tylerjbainbridge"
                 withColor
               >
-                software engineer
-              </ExternalLink>{" "}
-              and founder of{" "}
+                senior software engineer
+              </ExternalLink>
+              , college dropout,{" "}
+              <ExternalLink
+                href="https://mailchi.mp/publicannouncement/wednesday-stills-with-tyler-bainbridge"
+                withColor
+              >
+                photographer
+              </ExternalLink>
+              , and founder of the{" "}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
               >
-                perfectly imperfect
+                perfectly imperfect newsletter
               </ExternalLink>
-              , a twice weekly recommendation newsletter.
+              .
             </Box>
             <br />
             <Box as="p">
