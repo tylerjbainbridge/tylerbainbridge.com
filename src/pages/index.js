@@ -94,7 +94,7 @@ const About = () => {
                 href="https://github.com/tylerjbainbridge"
                 withColor
               >
-                senior software engineer
+                software engineer
               </ExternalLink>
               , college dropout,{" "}
               <ExternalLink
