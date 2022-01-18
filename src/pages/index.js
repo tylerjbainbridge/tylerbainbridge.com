@@ -137,6 +137,14 @@ const About = () => {
             <Box as="span">**press and more**</Box>
             <br />
             <ExternalLink
+              href="https://open.spotify.com/episode/0uSewEq3nyNvEKI6j3yphC"
+              fontStyle="italic"
+              withColor
+            >
+              Sound Radio Podcast (#24)
+            </ExternalLink>
+            <br />
+            <ExternalLink
               href="https://coolstuff.nyc/Cool-Friends-Tyler-Bainbridge-Perfectly-Imperfect"
               fontStyle="italic"
               withColor
