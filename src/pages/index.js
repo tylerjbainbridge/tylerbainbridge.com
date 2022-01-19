@@ -141,7 +141,16 @@ const About = () => {
               fontStyle="italic"
               withColor
             >
-              Sound Radio Podcast (#24)
+              Sound Radio Podcast Episode #24
+            </ExternalLink>
+            <br />
+            <ExternalLink
+              href="https://embedded.substack.com/p/the-newsletter-breaking-you-out-of"
+              fontStyle="italic"
+              withColor
+            >
+              The newsletter breaking you out of your algorithm bubble{" "}
+              (Embedded)
             </ExternalLink>
             <br />
             <ExternalLink
@@ -183,14 +192,6 @@ const About = () => {
             >
               What To Read: Tyler, Alex, and Serey are recommending things
               (Substack)
-            </ExternalLink>
-            <br />
-            <ExternalLink
-              href="https://siftsiftsift.substack.com/p/dinner-plans-33"
-              fontStyle="italic"
-              withColor
-            >
-              Perfectly Imperfect Recommends Recipes (Sifted)
             </ExternalLink>
           </Box>
           <br />
