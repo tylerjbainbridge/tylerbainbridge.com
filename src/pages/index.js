@@ -205,8 +205,15 @@ const About = () => {
             <InternalLink href="/2021-album-list" fontStyle="italic" withColor>
               My 2021 Albums of the Year
             </InternalLink>
+            <br />
+            <ExternalLink
+              href="https://dirt.substack.com/p/dirt-comic-stans"
+              fontStyle="italic"
+              withColor
+            >
+              A brief look at a misunderstood typeface, Comic Sans. (Dirt)
+            </ExternalLink>
           </Box>
-
           <SocialIcons />
 
           {!showPhotoOnSide && (
