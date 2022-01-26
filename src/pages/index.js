@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
-import { Box } from '@chakra-ui/react';
-import { useBreakpointValue } from '@chakra-ui/react';
+import React, { useEffect, useRef } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import { Box } from "@chakra-ui/react";
+import { useBreakpointValue } from "@chakra-ui/react";
 
-import { ExternalLink, InternalLink } from '../components/ui';
+import { ExternalLink, InternalLink } from "../components/ui";
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import { SocialIcons } from '../components/social';
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { SocialIcons } from "../components/social";
 
 const VIEW_MODES = {
-  FULL: 'FULL',
+  FULL: "FULL",
 };
 
 const About = () => {
@@ -33,17 +33,17 @@ const About = () => {
     urlParamsRef.current = new URLSearchParams(window.location.search);
   }, []);
 
-  const showFull = urlParamsRef.current?.get('mode') === VIEW_MODES.FULL;
+  const showFull = urlParamsRef.current?.get("mode") === VIEW_MODES.FULL;
 
   const breakpoint = useBreakpointValue({
-    sm: 'sm',
-    md: 'md',
-    lg: 'lg',
-    xl: 'xl',
-    '2xl': '2xl',
+    sm: "sm",
+    md: "md",
+    lg: "lg",
+    xl: "xl",
+    "2xl": "2xl",
   });
 
-  const showPhotoOnSide = breakpoint && !['sm', 'md'].includes(breakpoint);
+  const showPhotoOnSide = breakpoint && !["sm", "md"].includes(breakpoint);
 
   return (
     <Layout>
@@ -56,7 +56,7 @@ const About = () => {
           <Box width="30%" height="auto" maxHeight="90%" marginRight="30px">
             <Img
               imgStyle={{
-                border: '15px solid #FFFF00',
+                border: "15px solid #FFFF00",
               }}
               fluid={data.placeholderImage.childImageSharp.fluid}
             />
@@ -72,33 +72,33 @@ const About = () => {
             <Box as="p">hi there.</Box>
             <br />
             <Box as="p">
-              my name is{' '}
+              my name is{" "}
               <ExternalLink
                 href="https://www.instagram.com/tubbytyinthetub/"
                 fontWeight="bold"
                 withColor
               >
                 tyler bainbridge
-              </ExternalLink>{' '}
+              </ExternalLink>{" "}
               and i live in new york city.
             </Box>
             <br />
             <Box as="p">
-              i'm a{' '}
+              i'm a{" "}
               <ExternalLink
                 href="https://github.com/tylerjbainbridge"
                 withColor
               >
                 software engineer
               </ExternalLink>
-              , college dropout,{' '}
+              , college dropout,{" "}
               <ExternalLink
                 href="https://mailchi.mp/publicannouncement/wednesday-stills-with-tyler-bainbridge"
                 withColor
               >
                 photographer
               </ExternalLink>
-              , and founder of the{' '}
+              , and founder of the{" "}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
@@ -109,11 +109,11 @@ const About = () => {
             </Box>
             <br />
             <Box as="p">
-              shoot me an email me at{' '}
+              shoot me an email me at{" "}
               <ExternalLink href="mailto:hello@tylerbainbridge.com" withColor>
                 hello@tylerbainbridge.com
-              </ExternalLink>{' '}
-              or message me on{' '}
+              </ExternalLink>{" "}
+              or message me on{" "}
               <ExternalLink
                 href="https://www.instagram.com/tubbytyinthetub/"
                 withColor
@@ -123,6 +123,84 @@ const About = () => {
               .
             </Box>
           </Box>
+          {process.env.SHOW_EXPERIENCE ||
+            (showFull && (
+              <>
+                <br />
+                <Box width="100%">
+                  <Box fontFamily="special" as="span">
+                    **work**
+                  </Box>
+                  <br />
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
+                    senior front end engineer
+                  </Box>{" "}
+                  @{" "}
+                  <ExternalLink href="https://www.facebook.com/" withColor>
+                    facebook
+                  </ExternalLink>
+                  <br />
+                  {/* <Box fontFamily="bodyItalic" as="span" fontSize="20px">
+                    founder
+                  </Box>{' '}
+                  @{' '}
+                  <ExternalLink href="https://www.cataloged.co/" withColor>
+                    cataloged
+                  </ExternalLink>
+                  <br /> */}
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
+                    founder
+                  </Box>{" "}
+                  @{" "}
+                  <ExternalLink
+                    href="https://www.perfectlyimperfect.fyi/"
+                    withColor
+                  >
+                    perfectly imperfect newsletter
+                  </ExternalLink>
+                  {/* <br />
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
+                    senior javascript engineer
+                  </Box>{" "}
+                  @{" "}
+                  <ExternalLink href="https://www.cargurus.com/" withColor>
+                    cargurus
+                  </ExternalLink>
+                  <br />
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
+                    director of product eng
+                  </Box>{" "}
+                  @{" "}
+                  <ExternalLink href="https://www.conduithq.com/" withColor>
+                    conduit
+                  </ExternalLink> */}
+                  <br />
+                  {/* <Box fontFamily="bodyItalic" as="span" fontSize="20px">
+                    front end engineer
+                  </Box>{" "}
+                  @{" "}
+                  <ExternalLink href="https://www.higherme.com/" withColor>
+                    higherme
+                  </ExternalLink>
+                  <br />
+                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
+                    founder
+                  </Box>{" "}
+                  @{" "}
+                  <ExternalLink href="https://www.prsmphoto.com/" withColor>
+                    prism
+                  </ExternalLink>
+                  <br /> */}
+                  <ExternalLink
+                    alt="resume"
+                    href="https://drive.google.com/file/d/1wP-hCegvRzUT6wD4NcTEyk0i1RSMmIdU/view?usp=sharing"
+                    withColor
+                  >
+                    ...full resume
+                  </ExternalLink>
+                </Box>
+              </>
+            ))}
           <br />
           <Box
             width="100%"
@@ -144,7 +222,7 @@ const About = () => {
               fontStyle="italic"
               withColor
             >
-              The newsletter breaking you out of your algorithm bubble{' '}
+              The newsletter breaking you out of your algorithm bubble{" "}
               (Embedded)
             </ExternalLink>
             <br />
@@ -196,10 +274,7 @@ const About = () => {
             // maxWidth="600px"
           >
             <Box as="span">**other stuff**</Box>
-            <br />
-            <InternalLink href="/2021-album-list" fontStyle="italic" withColor>
-              My 2021 Albums of the Year
-            </InternalLink>
+
             <br />
             <ExternalLink
               href="https://dirt.substack.com/p/dirt-comic-stans"
@@ -208,6 +283,10 @@ const About = () => {
             >
               A brief look at a misunderstood typeface, Comic Sans. (Dirt)
             </ExternalLink>
+            <br />
+            <InternalLink href="/2021-album-list" fontStyle="italic" withColor>
+              My 2021 Albums of the Year
+            </InternalLink>
           </Box>
           <SocialIcons />
 
@@ -216,96 +295,12 @@ const About = () => {
               <br />
               <Img
                 // style={{ marginBottom: 20 }}
-                imgStyle={{ border: '10px solid #FFFF00' }}
+                imgStyle={{ border: "10px solid #FFFF00" }}
                 fluid={data.placeholderImage.childImageSharp.fluid}
               />
               <br />
             </>
           )}
-
-          {process.env.SHOW_EXPERIENCE ||
-            (showFull && (
-              <>
-                <br />
-                <Box width="100%" marginBottom="30px">
-                  <Box fontFamily="special" as="span">
-                    currently ~
-                  </Box>
-                  <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
-                    senior front end engineer
-                  </Box>{' '}
-                  @{' '}
-                  <ExternalLink href="https://www.facebook.com/" withColor>
-                    facebook
-                  </ExternalLink>
-                  <br />
-                  {/* <Box fontFamily="bodyItalic" as="span" fontSize="20px">
-                    founder
-                  </Box>{' '}
-                  @{' '}
-                  <ExternalLink href="https://www.cataloged.co/" withColor>
-                    cataloged
-                  </ExternalLink>
-                  <br /> */}
-                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
-                    writing
-                  </Box>{' '}
-                  @{' '}
-                  <ExternalLink
-                    href="https://www.perfectlyimperfect.fyi/"
-                    withColor
-                  >
-                    perfectly imperfect
-                  </ExternalLink>
-                </Box>
-                <Box width="100%" marginBottom="30px">
-                  <Box fontFamily="special" as="span">
-                    previously ~
-                  </Box>
-                  <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
-                    senior javascript engineer
-                  </Box>{' '}
-                  @{' '}
-                  <ExternalLink href="https://www.cargurus.com/" withColor>
-                    cargurus
-                  </ExternalLink>
-                  <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
-                    director of product eng
-                  </Box>{' '}
-                  @{' '}
-                  <ExternalLink href="https://www.conduithq.com/" withColor>
-                    conduit
-                  </ExternalLink>
-                  <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
-                    front end engineer
-                  </Box>{' '}
-                  @{' '}
-                  <ExternalLink href="https://www.higherme.com/" withColor>
-                    higherme
-                  </ExternalLink>
-                  <br />
-                  <Box fontFamily="bodyItalic" as="span" fontSize="20px">
-                    founder
-                  </Box>{' '}
-                  @{' '}
-                  <ExternalLink href="https://www.prsmphoto.com/" withColor>
-                    prism
-                  </ExternalLink>
-                  <br />
-                  <ExternalLink
-                    alt="resume"
-                    href="https://drive.google.com/file/d/1wP-hCegvRzUT6wD4NcTEyk0i1RSMmIdU/view?usp=sharing"
-                    withColor
-                  >
-                    ...
-                  </ExternalLink>
-                </Box>
-              </>
-            ))}
         </Box>
       </Box>
     </Layout>
