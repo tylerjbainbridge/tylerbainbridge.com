@@ -210,6 +210,15 @@ const About = () => {
             <Box as="span">**press and more**</Box>
             <br />
             <ExternalLink
+              href="https://www.vanityfair.com/style/2022/01/perfectly-imperfect-and-the-growing-currency-of-the-personal-recommendation"
+              fontStyle="italic"
+              withColor
+            >
+              Perfectly Imperfect and the Growing Currency of the Personal
+              Recommendation (Vanity Fair)
+            </ExternalLink>
+            <br />
+            <ExternalLink
               href="https://open.spotify.com/episode/0uSewEq3nyNvEKI6j3yphC"
               fontStyle="italic"
               withColor
