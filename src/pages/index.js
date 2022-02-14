@@ -286,6 +286,15 @@ const About = () => {
 
             <br />
             <ExternalLink
+              href="https://www.instagram.com/p/CZ2SDSDlBtW/"
+              fontStyle="italic"
+              withColor
+            >
+              Wife Guys: Thoughts on Love, Marriage, and Long Term Commitment.
+              (The Drunken Canal)
+            </ExternalLink>
+            <br />
+            <ExternalLink
               href="https://dirt.substack.com/p/dirt-comic-stans"
               fontStyle="italic"
               withColor
