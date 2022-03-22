@@ -1,19 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: 'tyler bainbridge',
-    description: 'newsletter guy and software engineer',
-    url: 'https://www.tylerbainbridge.com',
-    image: '/src/images/smiley.jpg', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@tjbainbridge',
-    author: 'tyler bainbridge',
+    title: "tyler bainbridge",
+    description: "newsletter guy and software engineer",
+    url: "https://www.tylerbainbridge.com",
+    image: "/src/images/smiley.jpg", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@tubbytyinthetub",
+    author: "tyler bainbridge",
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-exclude',
-      options: { paths: ['/old/**'] },
+      resolve: "gatsby-plugin-exclude",
+      options: { paths: ["/old/**"] },
     },
     {
-      resolve: '@chakra-ui/gatsby-plugin',
+      resolve: "@chakra-ui/gatsby-plugin",
       options: {
         isResettingCSS: true,
         isUsingColorMode: false,
@@ -35,13 +35,13 @@ module.exports = {
         name: `Tyler Bainbridge`,
         start_url: `/`,
         background_color: `#fff`,
-        icon: 'src/images/smiley.jpg',
+        icon: "src/images/smiley.jpg",
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-68674418-2',
+        trackingId: "UA-68674418-2",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
