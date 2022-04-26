@@ -1,23 +1,23 @@
-import React, { useEffect, useRef } from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
-import { Box } from "@chakra-ui/react";
-import { useBreakpointValue } from "@chakra-ui/react";
+import React, { useEffect, useRef } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import { Box } from '@chakra-ui/react';
+import { useBreakpointValue } from '@chakra-ui/react';
 
-import { ExternalLink, InternalLink } from "../components/ui";
+import { ExternalLink, InternalLink } from '../components/ui';
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import { SocialIcons } from "../components/social";
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { SocialIcons } from '../components/social';
 
 const VIEW_MODES = {
-  FULL: "FULL",
+  FULL: 'FULL',
 };
 
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "pi tote.jpeg" }) {
+      placeholderImage: file(relativePath: { eq: "banhmi.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
@@ -33,17 +33,17 @@ const About = () => {
     urlParamsRef.current = new URLSearchParams(window.location.search);
   }, []);
 
-  const showFull = urlParamsRef.current?.get("mode") === VIEW_MODES.FULL;
+  const showFull = urlParamsRef.current?.get('mode') === VIEW_MODES.FULL;
 
   const breakpoint = useBreakpointValue({
-    sm: "sm",
-    md: "md",
-    lg: "lg",
-    xl: "xl",
-    "2xl": "2xl",
+    sm: 'sm',
+    md: 'md',
+    lg: 'lg',
+    xl: 'xl',
+    '2xl': '2xl',
   });
 
-  const showPhotoOnSide = breakpoint && !["sm", "md"].includes(breakpoint);
+  const showPhotoOnSide = breakpoint && !['sm', 'md'].includes(breakpoint);
 
   return (
     <Layout>
@@ -56,14 +56,14 @@ const About = () => {
           <Box width="30%" height="auto" maxHeight="90%" marginRight="30px">
             <Img
               imgStyle={{
-                border: "15px solid #FFFF00",
+                border: '15px solid #FFFF00',
               }}
               fluid={data.placeholderImage.childImageSharp.fluid}
             />
           </Box>
         )}
         <Box paddingTop="15px">
-          <Box maxWidth="600px">
+          <Box maxWidth="650px">
             {/* <Box fontFamily="special">who is</Box> */}
             {/* <Box fontSize="30px" letterSpacing="7px" fontWeight="bolder">
               tyler bainbridge
@@ -72,48 +72,48 @@ const About = () => {
             <Box as="p">hi there.</Box>
             <br />
             <Box as="p">
-              my name is{" "}
+              my name is{' '}
               <ExternalLink
                 href="https://www.instagram.com/tubbytyinthetub/"
                 fontWeight="bold"
                 withColor
               >
                 tyler bainbridge
-              </ExternalLink>{" "}
+              </ExternalLink>{' '}
               and i live in new york city.
             </Box>
             <br />
             <Box as="p">
-              i'm a{" "}
+              i'm a college dropout,{' '}
               <ExternalLink
                 href="https://github.com/tylerjbainbridge"
                 withColor
               >
-                software engineer
+                open-source web developer
               </ExternalLink>
-              , college dropout,{" "}
+              , ocassional writer,{' '}
               <ExternalLink
-                href="https://mailchi.mp/publicannouncement/wednesday-stills-with-tyler-bainbridge"
+                href="https://www.instagram.com/tubbytyinthetub/"
                 withColor
               >
                 photographer
               </ExternalLink>
-              , and founder of the{" "}
+              , and the founder of{' '}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
               >
-                perfectly imperfect newsletter
+                perfectly imperfect
               </ExternalLink>
               .
             </Box>
             <br />
             <Box as="p">
-              shoot me an email me at{" "}
+              shoot me an email me at{' '}
               <ExternalLink href="mailto:hello@tylerbainbridge.com" withColor>
                 hello@tylerbainbridge.com
-              </ExternalLink>{" "}
-              or message me on{" "}
+              </ExternalLink>{' '}
+              or message me on{' '}
               <ExternalLink
                 href="https://www.instagram.com/tubbytyinthetub/"
                 withColor
@@ -134,8 +134,8 @@ const About = () => {
                   <br />
                   <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     senior front end engineer
-                  </Box>{" "}
-                  @{" "}
+                  </Box>{' '}
+                  @{' '}
                   <ExternalLink href="https://www.facebook.com/" withColor>
                     facebook
                   </ExternalLink>
@@ -150,8 +150,8 @@ const About = () => {
                   <br /> */}
                   <Box fontFamily="bodyItalic" as="span" fontSize="20px">
                     founder
-                  </Box>{" "}
-                  @{" "}
+                  </Box>{' '}
+                  @{' '}
                   <ExternalLink
                     href="https://www.perfectlyimperfect.fyi/"
                     withColor
@@ -219,6 +219,14 @@ const About = () => {
             </ExternalLink>
             <br />
             <ExternalLink
+              href="https://whyisthisinteresting.substack.com/p/the-monday-media-diet-with-tyler"
+              fontStyle="italic"
+              withColor
+            >
+              Tyler Bainbridge's Media Diet (Why is this interesting?)
+            </ExternalLink>
+            <br />
+            <ExternalLink
               href="https://open.spotify.com/episode/0uSewEq3nyNvEKI6j3yphC"
               fontStyle="italic"
               withColor
@@ -231,7 +239,7 @@ const About = () => {
               fontStyle="italic"
               withColor
             >
-              The newsletter breaking you out of your algorithm bubble{" "}
+              The newsletter breaking you out of your algorithm bubble{' '}
               (Embedded)
             </ExternalLink>
             <br />
@@ -313,7 +321,7 @@ const About = () => {
               <br />
               <Img
                 // style={{ marginBottom: 20 }}
-                imgStyle={{ border: "10px solid #FFFF00" }}
+                imgStyle={{ border: '10px solid #FFFF00' }}
                 fluid={data.placeholderImage.childImageSharp.fluid}
               />
               <br />
