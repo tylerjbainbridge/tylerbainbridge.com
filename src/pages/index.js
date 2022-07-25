@@ -51,7 +51,7 @@ const About = () => {
         title="Tyler's Website 😎"
         description="Newsletter Guy & Software Engineer"
       />
-      <Box fontSize="20px" marginTop="15px" marginBottom="15px" display="flex">
+      <Box fontSize="20px" marginTop="15px" paddingBottom="50px" display="flex">
         {showPhotoOnSide && (
           <Box width="30%" height="auto" maxHeight="90%" marginRight="30px">
             <Img
