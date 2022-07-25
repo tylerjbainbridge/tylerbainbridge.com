@@ -51,7 +51,7 @@ const About = () => {
         title="Tyler's Website 😎"
         description="Newsletter Guy & Software Engineer"
       />
-      <Box fontSize="20px" display="flex">
+      <Box fontSize="20px" marginTop="15px" marginBottom="15px" display="flex">
         {showPhotoOnSide && (
           <Box width="30%" height="auto" maxHeight="90%" marginRight="30px">
             <Img
@@ -62,7 +62,7 @@ const About = () => {
             />
           </Box>
         )}
-        <Box paddingTop="15px">
+        <Box marginTop="15px">
           <Box maxWidth="650px">
             {/* <Box fontFamily="special">who is</Box> */}
             {/* <Box fontSize="30px" letterSpacing="7px" fontWeight="bolder">
