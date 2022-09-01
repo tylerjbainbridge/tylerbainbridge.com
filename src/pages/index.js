@@ -299,7 +299,14 @@ const About = () => {
             // maxWidth="600px"
           >
             <Box as="span">**other stuff**</Box>
-
+            <br />
+            <ExternalLink
+              href="https://open.spotify.com/playlist/2nLaFRDNmrxntaZXJWaccQ?si=e1dca435796e4244"
+              fontStyle="italic"
+              withColor
+            >
+              NYC Beat Playlist (Spotify)
+            </ExternalLink>
             <br />
             <ExternalLink
               href="https://www.instagram.com/p/CZ2SDSDlBtW/"
