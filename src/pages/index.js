@@ -227,6 +227,15 @@ const About = () => {
             </ExternalLink>
             <br />
             <ExternalLink
+              href="https://blog.stp.world/2022/09/06/a-perfectly-imperfect-an-interview-with-tyler-bainbridge/"
+              fontStyle="italic"
+              withColor
+            >
+              Perfectly Imperfect: An Interview with Tyler Bainbridge (Serving
+              The People)
+            </ExternalLink>
+            <br />
+            <ExternalLink
               href="https://whyisthisinteresting.substack.com/p/the-monday-media-diet-with-tyler"
               fontStyle="italic"
               withColor
