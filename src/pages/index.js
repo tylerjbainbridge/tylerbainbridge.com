@@ -210,6 +210,14 @@ const About = () => {
             <Box as="span">**press and more**</Box>
             <br />
             <ExternalLink
+              href="https://www.nytimes.com/2022/10/25/style/perfectly-imperfect-party-newsletter.html"
+              fontStyle="italic"
+              withColor
+            >
+              What the "Cool Kids" Are Super Into (The New York Times)
+            </ExternalLink>
+            <br />
+            <ExternalLink
               href="https://www.vanityfair.com/style/2022/01/perfectly-imperfect-and-the-growing-currency-of-the-personal-recommendation"
               fontStyle="italic"
               withColor
@@ -268,22 +276,22 @@ const About = () => {
               Cool Friends: Tyler Bainbridge (coolstuff.nyc)
             </ExternalLink>
             <br />
-            <ExternalLink
+            {/* <ExternalLink
               href="https://lithiumagazine.com/2021/04/06/are-tastemakers-the-new-influencers/"
               fontStyle="italic"
               withColor
             >
               Are Tastemakers the New Influencers? (Lithium Magazine)
             </ExternalLink>
-            <br />
-            <ExternalLink
+            <br /> */}
+            {/* <ExternalLink
               href="https://open.spotify.com/playlist/56JudP6hJScQuJlaMz9RFE?si=d622936fcca74de9"
               fontStyle="italic"
               withColor
             >
               Music to Clean to Vol 13 (Intramural Shop)
             </ExternalLink>
-            <br />
+            <br /> */}
             <ExternalLink
               href="https://mailchi.mp/publicannouncement/wednesday-stills-with-tyler-bainbridge"
               fontStyle="italic"
