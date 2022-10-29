@@ -47,10 +47,7 @@ const About = () => {
 
   return (
     <Layout>
-      <SEO
-        title="Tyler's Website 😎"
-        description="Newsletter Guy & Software Engineer"
-      />
+      <SEO title="Tyler's Website 😎" description="A Guy With A Newsletter" />
       <Box fontSize="20px" marginTop="15px" paddingBottom="50px" display="flex">
         {showPhotoOnSide && (
           <Box width="30%" height="auto" maxHeight="90%" marginRight="30px">
@@ -69,7 +66,7 @@ const About = () => {
               tyler bainbridge
             </Box> */}
 
-            <Box as="p">hi there.</Box>
+            <Box as="p">hi there ❤️🤘😁🫶</Box>
             <br />
             <Box as="p">
               my name is{' '}
@@ -84,26 +81,19 @@ const About = () => {
             </Box>
             <br />
             <Box as="p">
-              i'm a college dropout,{' '}
-              <ExternalLink
-                href="https://github.com/tylerjbainbridge"
-                withColor
-              >
-                open-source web developer
-              </ExternalLink>
-              , ocassional writer,{' '}
-              <ExternalLink
-                href="https://www.instagram.com/tubbytyinthetub/"
-                withColor
-              >
-                photographer
-              </ExternalLink>
-              , and the founder of{' '}
+              i'm a college dropout, the founder of{' '}
               <ExternalLink
                 href="https://www.perfectlyimperfect.fyi/"
                 withColor
               >
                 perfectly imperfect
+              </ExternalLink>
+              , and an{' '}
+              <ExternalLink
+                href="https://github.com/tylerjbainbridge"
+                withColor
+              >
+                open-source web developer
               </ExternalLink>
               .
             </Box>
