@@ -88,6 +88,13 @@ const About = () => {
               >
                 perfectly imperfect
               </ExternalLink>
+              , an occassional{' '}
+              <ExternalLink
+                href="https://open.spotify.com/playlist/1AwaYCxOOLx8sm0gDMXtqa?si=17ca3e2211824f57"
+                withColor
+              >
+                DJ
+              </ExternalLink>
               , and an{' '}
               <ExternalLink
                 href="https://github.com/tylerjbainbridge"
