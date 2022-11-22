@@ -106,7 +106,7 @@ const About = () => {
             </Box>
             <br />
             <Box as="p">
-              shoot me an email me at{' '}
+              shoot me an email at{' '}
               <ExternalLink href="mailto:hello@tylerbainbridge.com" withColor>
                 hello@tylerbainbridge.com
               </ExternalLink>{' '}
