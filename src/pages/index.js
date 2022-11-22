@@ -17,7 +17,7 @@ const VIEW_MODES = {
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "california-2.png" }) {
+      placeholderImage: file(relativePath: { eq: "dj-perfect.JPG" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid
