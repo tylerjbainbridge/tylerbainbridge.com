@@ -5,7 +5,7 @@ import { Link as GatsbyLink } from 'gatsby';
 const linkStyles = {
   letterSpacing: '1px',
   cursor: 'pointer',
-  fontWeight: 'bold',
+  fontWeight: 'semibold',
   // borderBottom: '1px solid white',
   _hover: { color: '#FFFF00', borderBottom: '1px solid #FFFF00' },
 };
