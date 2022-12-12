@@ -50,7 +50,7 @@ export const albums = [
   },
   {
     artist: 'Bill Callahan',
-    album: 'YTI⅃AƎЯ',
+    album: 'YTILAER',
   },
   {
     artist: 'Ethel Cain',
