@@ -40,7 +40,7 @@ const About = () => {
         title="tyler's favorite albums of 2022"
         description="snow strippers, alex g, frost children, and more."
       />
-      <Box maxWidth="800px">
+      <Box maxWidth="800px" paddingBottom="50px">
         <Box fontSize="25px" fontWeight="bold" color="#FFFF00">
           tyler's favorite albums of 2022
         </Box>
