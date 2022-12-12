@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Box } from '@chakra-ui/react';
 
@@ -13,6 +13,10 @@ import './layout.css';
 import { InternalLink } from './ui';
 
 const Layout = ({ children, withBack }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Box
       backgroundColor="#0000ff"

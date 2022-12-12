@@ -8,6 +8,11 @@ export const stuff = [
     text: 'A brief look at a misunderstood typeface, Comic Sans. (Dirt)',
   },
   {
+    link: '/2022-album-list',
+    text: 'My 2022 Albums of the Year',
+    isInternal: true,
+  },
+  {
     link: '/2021-album-list',
     text: 'My 2021 Albums of the Year',
     isInternal: true,

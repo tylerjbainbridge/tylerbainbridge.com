@@ -176,3 +176,34 @@ export const HomePageIntro = () => {
     </Box>
   );
 };
+
+export function AlbumListSection({ albums }) {
+  return (
+    <Box fontSize="20px" margin="20px 20px 20px 0px">
+      {albums.map(({ artist, album, embed = null }, index) => {
+        return (
+          <Box color="#FFFF00" marginBottom="2px">
+            <ExternalLink
+              fontWeight="normal"
+              href={`http://www.google.com/search?q=${artist} ${album}`}
+            >
+              <Box as="span" fontWeight="bold">
+                {artist.toLowerCase()}
+              </Box>{' '}
+              -{' '}
+              <Box as="em" fontWeight="normal">
+                {album.toLowerCase()}
+              </Box>
+            </ExternalLink>
+            {/* {embed && (
+        <Box
+          dangerouslySetInnerHTML={{ __html: embed }}
+          maxWidth="300px"
+        />
+      )} */}
+          </Box>
+        );
+      })}
+    </Box>
+  );
+}

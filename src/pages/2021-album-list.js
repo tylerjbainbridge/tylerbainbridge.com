@@ -4,9 +4,10 @@ import Img from 'gatsby-image';
 import { Box } from '@chakra-ui/react';
 import { useBreakpointValue } from '@chakra-ui/react';
 
-import { InternalLink, ExternalLink } from '../components/ui';
+import { InternalLink } from '../components/ui';
 
 import Layout from '../components/layout';
+import { AlbumListSection } from '../components/sections';
 import SEO from '../components/seo';
 import { SocialIcons } from '../components/social';
 import { albums } from '../data/2021-album-list';
@@ -75,38 +76,14 @@ const About = () => {
           fluid={data.placeholderImage.childImageSharp.fluid}
         />
 
-        <Box as="ol" fontSize="20px" margin="20px" paddingBottom="50px">
-          {albums.map(({ artist, album, embed = null }, index) => {
-            return (
-              <Box as="li" color="#FFFF00" marginBottom="2px">
-                <ExternalLink
-                  fontWeight="normal"
-                  href={`http://www.google.com/search?q=${artist} ${album}`}
-                >
-                  <Box as="span" fontWeight="bold">
-                    {artist.toLowerCase()}
-                  </Box>{' '}
-                  -{' '}
-                  <Box as="em" fontWeight="normal">
-                    {album.toLowerCase()}
-                  </Box>
-                </ExternalLink>
-                {/* {embed && (
-                <Box
-                  dangerouslySetInnerHTML={{ __html: embed }}
-                  maxWidth="300px"
-                />
-              )} */}
-              </Box>
-            );
-          })}
-          <br />
-          <InternalLink href="/" fontStyle="italic" withColor>
-            back home...
-          </InternalLink>
-          <br />
-          <SocialIcons />
-        </Box>
+        <AlbumListSection albums={albums} />
+
+        <br />
+        <InternalLink href="/" fontStyle="italic" withColor>
+          back home...
+        </InternalLink>
+        <br />
+        <SocialIcons />
       </Box>
     </Layout>
   );
