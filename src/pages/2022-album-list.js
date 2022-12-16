@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { Box } from '@chakra-ui/react';
-import { useBreakpointValue } from '@chakra-ui/react';
 
 import { InternalLink, ExternalLink } from '../components/ui';
 

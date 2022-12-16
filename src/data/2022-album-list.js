@@ -5,7 +5,7 @@ export const albums = [
   },
   {
     artist: 'Alex G',
-    album: 'Runner',
+    album: 'God Save The Animals',
   },
   {
     artist: 'Buckshot',
