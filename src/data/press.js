@@ -4,12 +4,24 @@ export const press = [
     text: `What the "Cool Kids" Are Super Into (The New York Times)`,
   },
   {
+    link: 'https://www.interviewmagazine.com/music/tyler-bainbridge-of-perfectly-imperfect-seizes-control-of-the-aux',
+    text: `Tyler Bainbridge Seizes Control of the Aux (Interview Mag)`,
+  },
+  {
     link: 'https://www.vanityfair.com/style/2022/01/perfectly-imperfect-and-the-growing-currency-of-the-personal-recommendation',
     text: `Perfectly Imperfect and the Growing Currency of the Personal Recommendation (Vanity Fair)`,
   },
   {
     link: 'https://nymag.com/strategist/2022/07/san-francisco-and-mendocino-itinerary-of-things-to-do.html',
     text: 'Steal My Vacation: Tyler Bainbridge (New York Magazine)',
+  },
+  {
+    link: 'https://www.dazeddigital.com/life-culture/article/58505/1/guide-new-york-city-perfectly-imperfect-the-dare-clip',
+    text: `Feeling Scene: A guide to New York (Dazed)`,
+  },
+  {
+    link: 'https://www.papermag.com/perfectly-imperfect-sxsw-2659674411.html',
+    text: `Inside Perfectly Imperfect's First SXSW Showcase (Paper Mag)`,
   },
   {
     link: 'https://blog.stp.world/2022/09/06/a-perfectly-imperfect-an-interview-with-tyler-bainbridge/',
