@@ -8,6 +8,10 @@ export const playlists = [
     text: 'NYC Beat Playlist (Spotify)',
   },
   {
+    link: 'https://open.spotify.com/playlist/3N7nqGxQ62h8dHr6kzJX5d?si=cf39a166c5f94f00',
+    text: 'The New Sound (Spotify)',
+  },
+  {
     link: 'https://open.spotify.com/playlist/1AwaYCxOOLx8sm0gDMXtqa?si=8c7e1810cc514496',
     text: 'dj perfect (Spotify)',
   },
